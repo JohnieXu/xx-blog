@@ -1,6 +1,5 @@
 ---
-sidebarDepth: 2
-next: ./hello-world
+next: ./regular-directives-of-Git
 ---
 
 # 前端文件上传总结

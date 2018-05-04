@@ -48,6 +48,7 @@ module.exports = {
       '/articles/FE/': [
         '',     /* /articles/FE/ */
         'FE-file-upload',  /* /articles/FE/FE-file-upload.html */
+        'regular-directives-of-Git',
         'hello-world',   /* /articles/FE/hello-world.html */
         'hello-VuePress'
       ],
