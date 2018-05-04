@@ -1,8 +1,4 @@
 module.exports = {
-  title: "JohnieXu's Blog",
-  description: 'Believe in yourself and just do it! Go......',
-  base: '/xx-blog/',
-  dest: 'dist',
   repo: 'https://github.com/JohnieXu',
   themeConfig: {
     nav: [
