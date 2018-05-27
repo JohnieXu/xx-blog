@@ -1,5 +1,5 @@
 ---
-next: ./hello-world
+next: ./deep-understanding-of-JS-module
 ---
 
 # Git常用命令整理
