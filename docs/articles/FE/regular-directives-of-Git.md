@@ -175,7 +175,7 @@ git stash pop // 恢复之前工作区以便继续新功能的开发, 同时删�
 
 `个人分支`: 每个人都有自己的分支，提交代码的时候往dev分支上合并
 
-![分支策略](https://cdn.liaoxuefeng.com/cdn/files/attachments/001384909239390d355eb07d9d64305b6322aaf4edac1e3000/0)
+![分治策略](~@imgs/8516b453-0a01-40f7-ac76-49c1a01dabca.png)
 
 ### 标签管理
 
@@ -249,4 +249,24 @@ git remote set-url --add --push all https://github.com/JohnieXu/eleme-web-vue.gi
 git remote set-url --add --push all https://git.coding.net/JohnieXu/eleme-web-vue.git // 在all上追加push对应的远程仓库地址为github的地址
 git add . && git commit -m 'init' && git push -u all master // all分支同时关联了origin和coding两个远程仓库, 推送all即可同步push代码到两个远程仓库
 ```
+
+### 暂存修改
+
+**适用场景**: 当前`git`项目有`master`,`dev`两个分支, 无意中在本地`pull`的`master`分支上做了**有用的**代码修改, 临时需要处理`master`分支上的一个`bug`; 同时, 由于之前在`master`分支上的修改正常应该放在`dev`分支上, 需要在处理完`bug`后将`master`分支上的修改放到`dev`分支上。
+
+```bash{5-6}
+git stash // 暂存master分支上的修改(效果和git checkout -- .相似, 但是对代码的修改并未删除)
+git checkout -b bug // 根据master分支创建新的临时bug分支
+git add . && git commit -m 'commit' // 修复bug并commit修改
+git checkout master && git merge bug && git branch -d bug // 合并bug分支到master分支, 删除bug分支
+git checkout dev // 切换到dev分支, 此分支为之前对master分支的修改正常所在分支
+git stash pop // 将之前暂存的修改放到dev分支, 此时处于处于modified状态, 需要git add . && git commit
+...
+```
+
+**补充说明:**
+
+- `git stash list`: 查看所有的暂存信息
+- `git stash apply stash@{0}`: 恢复`stash@{0}`这个暂存, 也可用`git stash apply`即默认恢复第一个暂存, 此命令并未删除`stash`记录, 需用`git stash drop`删除暂存记录
+- `git stash pop`: 恢复到第一个暂存并删除这条暂存记录
 

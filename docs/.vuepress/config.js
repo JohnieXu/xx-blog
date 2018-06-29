@@ -1,3 +1,4 @@
+var path = require('path');
 module.exports = {
   title: "JohnieXu's Blog",
   description: 'Believe in yourself and just do it! Go......',
@@ -81,5 +82,12 @@ module.exports = {
     docsBranch: 'gh-pages',
     editLinks: true,
     editLinkText: '发现错误?'
+  },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@imgs': path.resolve(__dirname, '../../static/imgs')
+      }
+    }
   }
 }
