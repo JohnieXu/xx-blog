@@ -270,3 +270,25 @@ git stash pop // 将之前暂存的修改放到dev分支, 此时处于处于modi
 - `git stash apply stash@{0}`: 恢复`stash@{0}`这个暂存, 也可用`git stash apply`即默认恢复第一个暂存, 此命令并未删除`stash`记录, 需用`git stash drop`删除暂存记录
 - `git stash pop`: 恢复到第一个暂存并删除这条暂存记录
 
+### 撤回已移除文件
+
+**适用场景**: 在多人协作开发时， 他人误将之前未完善的文件删除了， 同时（在自己提交代码之前）推送到了远程仓库， 而自己想找回被删掉的文件； 或者只想找回自己之前删掉的文件。
+
+```bash{2}
+git log --diff-filter=D --summary // 查找删除文件的记录， 获取对应的commitID及要恢复的文件路径filepath
+git checkout $commitID~1 filepath // 恢复filepath这个文件， 原理： 撤回filepath这个文件到上次(～1)提交的commit状态
+```
+
+### 更新fork的项目
+
+**适用场景**: 在github上fork了一份他人的项目， 后来他人的项目更新了， 自己fork的这一份也想更新
+
+```bash{3,5}
+git remote -v // 查看相当本地项目(fork的项目)分支详情
+git remtoe add upstream https://github.com/JohnieXu/eleme-web-vue.git // 创建远程仓库源upstream并关联到原始仓库
+git fetch upstream // 拉取原始仓库
+git checkout master // 切换到本地项目需要更新的分支
+git merge upstream/master // 将原始仓库更新合并到本地需要更新仓库
+git push origin master // 推送更新到本地仓库关联的远程仓库(自己github上fork的仓库)
+```
+
