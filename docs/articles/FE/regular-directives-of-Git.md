@@ -281,7 +281,7 @@ git checkout $commitID~1 filepath // 恢复filepath这个文件， 原理： 撤
 
 ### 更新fork的项目
 
-**适用场景**: 在github上fork了一份他人的项目， 后来他人的项目更新了， 自己fork的这一份也想更新
+**适用场景**: 在github上fork了一份他人的项目， 后来他人的项目更新了， 自己fork的这一份也想更新。
 
 ```bash{3,5}
 git remote -v // 查看相当本地项目(fork的项目)分支详情
