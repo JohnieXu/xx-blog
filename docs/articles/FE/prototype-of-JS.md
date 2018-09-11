@@ -1,5 +1,5 @@
 ---
-next: ./hello-world
+next:
 ---
 
 # JS原型链

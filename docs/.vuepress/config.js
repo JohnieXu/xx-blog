@@ -50,7 +50,8 @@ module.exports = {
         '',     /* /articles/FE/ */
         'FE-file-upload',  /* /articles/FE/FE-file-upload.html */
         'regular-directives-of-Git', /* /articles/FE/regular-directives-of-Git.html */
-        'deep-understanding-of-JS-module'
+        'deep-understanding-of-JS-module',
+        'prototype-of-JS'
       ],
       '/articles/BE/': [
         '',
