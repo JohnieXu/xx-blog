@@ -1,5 +1,5 @@
 ---
-next: ./hello-world
+next: ./prototype-of-JS
 ---
 
 # 深入理解JS模块
