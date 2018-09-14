@@ -1,7 +1,3 @@
----
-prev: hello-world
----
-
 # hello VuePress
 
 ## title1

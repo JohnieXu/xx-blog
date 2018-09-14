@@ -1,7 +1,3 @@
----
-next: ./prototype-of-JS
----
-
 # 深入理解JS模块
 
 ## 引言

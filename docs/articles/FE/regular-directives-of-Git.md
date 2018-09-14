@@ -1,7 +1,3 @@
----
-next: ./deep-understanding-of-JS-module
----
-
 # Git常用命令整理
 
 ## 配置命令

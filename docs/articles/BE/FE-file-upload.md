@@ -1,8 +1,3 @@
----
-sidebarDepth: 2
-next: ./hello-world
----
-
 # 前端文件上传总结
 
 ## 0.图片上传思路

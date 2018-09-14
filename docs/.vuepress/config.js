@@ -80,7 +80,8 @@ module.exports = {
     docsDir: 'docs',
     docsBranch: 'gh-pages',
     editLinks: true,
-    editLinkText: '发现错误?'
+    editLinkText: '发现错误?',
+    lastUpdated: '更新于'
   },
   configureWebpack: {
     resolve: {
