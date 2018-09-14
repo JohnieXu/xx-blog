@@ -77,7 +77,7 @@ module.exports = {
       ]
     },
     sidebarDepth: 2,
-    repo: 'JohnieXu/xx-blog',
+    repo: 'JohnieXu',
     repoLabel: 'GitHub',
     docsDir: 'docs',
     docsBranch: 'gh-pages',
