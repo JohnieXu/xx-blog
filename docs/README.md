@@ -2,7 +2,7 @@
 home: true
 heroImage: /home-image.jpg
 actionText: 开始探索 →
-actionLink: /articles/FE/
+actionLink: /articles/FE/FE-file-upload.html
 features:
 - title: 宁静
   details: “人主之居也，如日月之明也。天下之所同侧目而视，侧耳而听，延颈举踵而望也。是故非澹泊无以明志，非宁静无以致远，非宽大无以兼覆，非慈厚无以怀众，非平正无以制断。”
