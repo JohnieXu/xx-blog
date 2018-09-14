@@ -4,7 +4,6 @@ module.exports = {
   description: 'Believe in yourself and just do it! Go......',
   base: '/xx-blog/',
   dest: 'dist',
-  repo: 'https://github.com/JohnieXu',
   themeConfig: {
     nav: [
       {
@@ -75,12 +74,12 @@ module.exports = {
     },
     displayAllHeaders: false,
     sidebarDepth: 2,
-    repo: 'JohnieXu',
+    repo: 'JohnieXu/xx-blog',
     repoLabel: 'GitHub',
     docsDir: 'docs',
-    docsBranch: 'gh-pages',
+    docsBranch: 'master',
     editLinks: true,
-    editLinkText: '发现错误?',
+    editLinkText: '编辑此文章',
     lastUpdated: '更新于'
   },
   configureWebpack: {
