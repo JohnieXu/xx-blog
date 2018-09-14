@@ -95,15 +95,16 @@ function uploadAndSubmit() {
 >  9.  上传图片可以使用base64上传或者formData上传
 
 ## 7.修改后方案
-[图片上传失败...(image-a42230-1524582249312)]
+
+![修改后方案](~@imgs/d73b8d36-4e55-4028-b0e5-b5023d4465a9.png)
 
 ## 8.最终完善上传代码
 
-```javascript
+```html
 // html文件
 <input type="file" name="image" accept=“image/*” onchange='handleInputChange'>
 ```
-```
+```javascript
 // js文件
 // 全局对象，不同function使用传递数据
 const imgFile = {};
