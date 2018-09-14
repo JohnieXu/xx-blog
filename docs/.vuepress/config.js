@@ -16,19 +16,19 @@ module.exports = {
         items: [
           {
             text: '前端',
-            link: '/articles/FE/'
+            link: '/articles/FE/FE-file-upload.html'
           },
           {
             text: '后端',
-            link: '/articles/BE/'
+            link: '/articles/BE/hello-world.html'
           },
           {
             text: '移动端',
-            link: '/articles/APP/'
+            link: '/articles/APP/hello-world.html'
           },
           {
             text: '跨平台',
-            link: '/articles/NativeJs/'
+            link: '/articles/NativeJs/hello-world.html'
           }
         ]
       },
@@ -47,27 +47,24 @@ module.exports = {
     ],
     sidebar: {
       '/articles/FE/': [
-        '',     /* /articles/FE/ */
+        // '',     /* /articles/FE/ */
         'FE-file-upload',  /* /articles/FE/FE-file-upload.html */
         'regular-directives-of-Git', /* /articles/FE/regular-directives-of-Git.html */
         'deep-understanding-of-JS-module',
         'prototype-of-JS'
       ],
       '/articles/BE/': [
-        '',
-        'FE-file-upload',
+        // '',
         'hello-world',
         'hello-VuePress'
       ],
       '/articles/APP/': [
-        '',
-        'FE-file-upload',
+        // '',
         'hello-world',
         'hello-VuePress'
       ],
       '/articles/NativeJs/': [
-        '',
-        'FE-file-upload',
+        // '',
         'hello-world',
         'hello-VuePress'
       ],
@@ -76,6 +73,7 @@ module.exports = {
         '',        /* /articles/ */
       ]
     },
+    displayAllHeaders: false,
     sidebarDepth: 2,
     repo: 'JohnieXu',
     repoLabel: 'GitHub',

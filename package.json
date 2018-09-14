@@ -23,6 +23,6 @@
   "license": "MIT",
   "devDependencies": {
     "gh-pages": "^1.1.0",
-    "vuepress": "^0.8.4"
+    "vuepress": "^0.14.3"
   }
 }
