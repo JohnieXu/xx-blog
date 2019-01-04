@@ -36,3 +36,40 @@
 -   模块暴露的属性和方法不是值的传递而是类似指针的绑定
 
 -   导入模块和从网络请求加载模块完全一样
+
+    浏览器/Node.js 提供了各自环境下默认的模块加载器(Module Loader)，`import ... from 'xxx`语句对于模块加载器来说就是**告诉模块加载器去哪个 URL/文件路径下获取对应的模块**
+
+## export 模块导出
+
+### 命名导出
+
+-   模块内部没有全局作用域，以下例子中的 var 定义的作用域仅在本模块，模块内可以访问和使用全局 global/window 等，但不建议这么用。
+
+    ```js
+    function foo() {
+        //...
+    }
+    var awesome = 11;
+    var bar = [1, 2, 3, 4];
+    export { foo, awesome, bar };
+    ```
+
+### 默认导出
+
+export 导出是对变量的绑定(指针)，export default 导出是对值的绑定，export {a as default}到处是对变量的绑定(指针)
+
+```js
+// 模块1
+function foo() {
+    // ...
+}
+export default foo;// 这里默认导出是对foo值的绑定，若后续对foo有更改默认导出值不会相应更改
+
+// 模块2
+function foo() {
+    // ...
+}
+export { foo as default};// 这里默认导出是对变量foo的绑定(类似指针的绑定)，若后续对foo有更改相应的默认导出也会更改
+```
+
+## import 模块导入
