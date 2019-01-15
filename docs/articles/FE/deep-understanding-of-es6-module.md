@@ -88,3 +88,7 @@ import foo, { awesome as Awesome }, * as Bar from 'path/to/module';
 ```
 
 以上的 foo 是默认导入，Awesome 为别名导入，Bar 为命名空间导入(讲所有导出导入到 Bar 的命名空间下),注意**所有导入的绑定都是不可变的/或只读的**，同时**import 的声明是提升的，不同于 require 的动态加载**（这里不清楚 webpack 的 import 动态加载怎么做到的）
+
+## 模块依赖环
+
+// TODO:
