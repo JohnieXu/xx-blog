@@ -51,7 +51,9 @@ module.exports = {
                 "regular-directives-of-Git" /* /articles/FE/regular-directives-of-Git.html */,
                 "deep-understanding-of-JS-module",
                 "prototype-of-JS",
-                "deep-understanding-of-es6-module"
+                "deep-understanding-of-es6-module",
+                "key-concepts-of-react-and-dva",
+                "web-service-deployment"
             ],
             "/articles/BE/": [
                 // '',
