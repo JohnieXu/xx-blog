@@ -300,6 +300,28 @@ git merge upstream/master // 将原始仓库更新合并到本地需要更新仓
 git push origin master // 推送更新到本地仓库关联的远程仓库(自己github上fork的仓库)
 ```
 
+### 子模块管理
+
+> Submodules rely on nesting repos: you have repos within… repos. The module has its own repo, somewhere inside the working directory of its container repo.
+
+> 子模块是一个独立的git仓库，拥有独立的commit记录，拉取主项目不会自动更新子模块
+
+**适用场景**: 一个主项目中依赖了其他子项目，分别由不同人员协作开发
+
+```bash{3}
+git submodule add https://github.com/JohnieXu/cars-component.git // 添加子模块
+git submodule update --init --recursive
+ // 更新一个含有submodule的远程仓库，同时拉取其submodule --recursive为可选
+git clone --recursive https://github.com/JohnieXu/cars-component.git // 克隆一个含有submodule的远程仓库，同时拉取其submodule
+```
+
+移除子模块
+```bash
+git submodule deinit path/to/module // 移除子模块关联
+git rm path/to/module // 移除子模块文件夹
+git commit -am update // commit
+```
+
 ## Git不是万能的
 
 > 这里主要说的是对Git设计思想方面的思考（就是一些废话，可略过）
