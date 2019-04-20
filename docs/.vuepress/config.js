@@ -19,7 +19,7 @@ module.exports = {
                     },
                     {
                         text: "后端",
-                        link: "/articles/BE/hello-world.html"
+                        link: "/articles/BE/web-service-deployment.html"
                     },
                     {
                         text: "移动端",
@@ -53,12 +53,12 @@ module.exports = {
                 "prototype-of-JS",
                 "deep-understanding-of-es6-module",
                 "key-concepts-of-react-and-dva",
-                "web-service-deployment"
+                "video.js-in-react",
+                "react-quill-in-react"
             ],
             "/articles/BE/": [
                 // '',
-                "hello-world",
-                "hello-VuePress"
+                "web-service-deployment"
             ],
             "/articles/APP/": [
                 // '',
