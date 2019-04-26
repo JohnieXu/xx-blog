@@ -24,4 +24,4 @@
 
 ### 一个通用业务组件封装示例
 
-![产品卡片](https://ws1.sinaimg.cn/large/006tNc79gy1g2g59j5w30j30z40fw7m8.jpg)
+![产品卡片](~@imgs/4787d6dc-f780-4742-a971-f42f98d578b2.jpg)
