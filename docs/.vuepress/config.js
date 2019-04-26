@@ -54,7 +54,8 @@ module.exports = {
                 "deep-understanding-of-es6-module",
                 "key-concepts-of-react-and-dva",
                 "video.js-in-react",
-                "react-quill-in-react"
+                "react-quill-in-react",
+                "react-component-encapsulation"
             ],
             "/articles/BE/": [
                 // '',
