@@ -55,7 +55,8 @@ module.exports = {
                 "key-concepts-of-react-and-dva",
                 "video.js-in-react",
                 "react-quill-in-react",
-                "react-component-encapsulation"
+                "react-component-encapsulation",
+                "frontend-interview"
             ],
             "/articles/BE/": [
                 // '',

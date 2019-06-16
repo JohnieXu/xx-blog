@@ -322,6 +322,189 @@ git rm path/to/module // 移除子模块文件夹
 git commit -am update // commit
 ```
 
+## 实际使用流程
+
+### 基本配置
+
+下面几种场景的**操作前提**都需要先完成基本配置：
+
+- 配置用户名和邮箱
+
+  [配置用户名和邮箱](#配置用户名和邮箱)
+
+  ```bash
+  git config --global user.name "JohnieXu" // 配置全局用户名为JohnieXu
+  git config --global user.email "281910378@qq.com" // 配置全局邮箱为281910378@qq.com
+  ```
+
+- 配置公钥(建议)
+
+  [生成公钥文件](#配置公钥)，然后在git服务器中保存本地生成的公钥文件内容，公钥文件一般位于:
+
+  macos: `~/.ssh/id_rsa.pub`
+  windows: `用户目录/.ssh/id_rsa.pub`
+
+### 场景一：从远程克隆项目
+
+这是最常见的使用场景，用于从公司现有项目/github开源项目/本地git仓库克隆项目继续进行开发，涉及如何`分支管理` `提交更新` `如何解决代码冲突`等
+
+- **从远程克隆项目**
+
+默认拉取整个git项目将是处于master分支，然后在本地进行分支等操作
+
+```bash
+git clone git clone https://github.com/JohnieXu/eleme-web-vue.git // 默认拉取master分支
+```
+
+- **切换分支**
+
+一般多人协作开发的项目都有多个分支，发时候切换到对应的开发分支
+
+切换到开发分支(假设是dev分支)
+
+```bash
+git checkout dev // 假设当前开发分支在dev分支上
+```
+
+- **创建本地个人分支**
+
+主要根据开发分支创建自己的个人分支，后面对代码的修改都在这个分支上完成，这个分支不用提交到远程仓库；开发完成功能后需要合并更新到开发分支。
+
+```bash
+git checkout -b chenxing // 从当前分支（dev）创建新的分支：chenxing，同时会切换到chenxing这一分支
+```
+
+此时处于`chenxing`这一分支，目前项目内容与`dev`分支一模一样，然后可以进入项目开发了。
+
+- **向git提交记录**
+
+```bash
+git add . // 把当前目录下所有修改的文件添加进暂存区
+git commit -m "这里是写一些描述信息" // 提交commit记录
+```
+
+完成这一步操作后，对项目的修改就被添加进git的chenxing分支了，使用`git status`命令会看到分支内容是干净的。
+
+假如这时候预期安排开发的功能都完成了，或者他人需要看到你最近更新的功能，就需要进行下一步操作了，不然则继续接着开发。
+
+- **合并更新到开发分支**
+
+```bash
+git checkout dev // 切换到dev分支
+git merge chenxing // 将自己分支的更新合并到dev分支
+git branch -d chenxing // 删除自己的分支
+```
+
+- **拉取远程仓库更新**
+
+```bash
+git pull origin dev // 将远程仓库dev分支更新拉取到本地并尝试快速合并本地更新
+```
+
+如果命令行提示快速合并成功，则可以直接推送代码到远程仓库，如果提示有代码冲突则进入下面解决冲突的步骤。
+
+拉取远程更新时候遇到冲突会有类似下面这样的提示：
+
+![拉取远程更新遇到冲突](~@imgs/5d72eaa2-15e1-41bd-b3d1-9ab54341d1f8.png)
+
+运行命令`git status`，会看到类似下面展示的冲突文件提示：
+
+![代码冲突提示信息](~@imgs/7fa5ccf5-1baf-492d-927e-eeeaf0de642f.png)
+
+- **解决冲突**
+
+最简单快速的解决冲突方法就是采用[vscode编辑器](https://code.visualstudio.com/)配合[gitlen插件](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)快速定位和修复冲突文件，然后再次提交commit修复冲突。
+
+在vscode编辑器中，文件带有`C`(conflict首字母)标识的文件为存在冲突的文件
+
+![](~@imgs/e482005b-506e-4b2a-ba92-05fcfaf29c91.png)
+
+点开冲突文件，通过gitlen可以看到冲突情况如下：
+
+![文件冲突情况](~@imgs/1521f01a-6f01-4d7e-83df-29c9682bcc57.png)
+
+文件中存在三种特殊的标识：
+
+1. `<<<<<<<`
+2. `=======`
+3. `>>>>>>>`
+
+对应的说明在下图的标注中，冲突指的是对应的`<<<<<<< HEAD`和`=======`之间的内容与`=======`和`>>>>>>> 46e233a7b4b601b896c13a6e2c577d12c87f3c17`之间的内容不一致，需要删除你不需要的部分，最后**确保代码中不再有上面的任何一个特殊标记**。
+
+
+![修复冲突](~@imgs/39633bfe-48f6-4b37-96b2-af9d834259e8.png)
+
+> 注意：代码冲突解决完毕 === 不存在任何的`<<<<<<<` `=======` `>>>>>>>`标识
+
+- **推送更到到远程仓库**
+
+手动修复完冲突后，需要添加文件然后提交commit，然后可以在vscode的文件管理器中看到文件没有`C`标识，然后将更新推送到远程仓库
+
+```bash
+git add . // 添加本次修复冲突更改的文件
+git commit -m "fix conflict" // 提交更新
+git push origin dev // 推送更新到远程仓库的dev分支
+```
+
+
+### 场景二：仅本地使用
+
+- **初始化git**
+
+```bash
+git init
+```
+
+- **添加修改文件&提交**
+
+```bash
+git add . // 添加修改的文件
+git commit -m "本次更新的一些描述信息" // 提交更新到本地git仓库
+```
+
+- **修复最后一次的commit信息**
+
+```bash
+git commit --amend // 然后在vim编辑界面编辑commit信息即可
+```
+
+- **删除git仓库信息**
+
+当需要完全删除git版本/提交记录等时候使用；仅仅删除git仓库记录的内容，文件不会删除；可以再次初始化git重新添加git管理
+
+```bash
+rm -rf .git // 删除git仓库
+```
+
+- **打包bundle**
+
+将某个分支下的一个commitId或HEAD指向的内容压缩成bundle包，可以快速与他人共享特定部分的代码，在没有git服务器的时候也可以通过这种方式来推送更新内容给他人。
+
+```bash
+git bundle create name.bundle HEAD dev // 将dev分支HEAD指向处的内容（包含之前的commit记录，不包含其他分支）打包成name.bundle文件，存在当前目录下
+```
+
+- **通过bundle文件克隆项目**
+
+这种方式克隆克隆的项目只有bundle中的部分分支和部分commit记录
+
+```bash
+git clone path/to/name.bundle test // 从name.bundle文件中克隆处项目存在./test文件夹下
+```
+
+### 场景三：本地使用然后同步至远程
+
+本地存在一个git项目，需要推送到git服务器中与他人共享
+
+```bash
+git remote add origin https://github.com/JohnieXu/eleme-web-vue.git // 将远程仓库关联到本地git仓库的origin上，远程仓库必须为空项目
+git push origin master // 推送本地master分支到远程仓库origin的master上
+git push origin dev // 推送本地dev分支到远程仓库origin的dev上
+git push origin master --tags // 当存在tags时可以顺便推送tags到远程仓库
+```
+
+后面的操作与[场景一]()的用法一致不再赘述
+
 ## Git不是万能的
 
 > 这里主要说的是对Git设计思想方面的思考（就是一些废话，可略过）
