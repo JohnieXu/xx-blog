@@ -292,11 +292,11 @@ git checkout $commitID~1 filepath // 恢复filepath这个文件， 原理： 撤
 **适用场景**: 在github上fork了一份他人的项目， 后来他人的项目更新了， 自己fork的这一份也想更新。
 
 ```bash{3,5}
-git remote -v // 查看相当本地项目(fork的项目)分支详情
-git remtoe add upstream https://github.com/JohnieXu/eleme-web-vue.git // 创建远程仓库源upstream并关联到原始仓库
+git remote -v // 查看当本地项目(fork的项目)分支详情
+git remote add upstream https://github.com/JohnieXu/eleme-web-vue.git // 创建远程仓库源upstream并关联到原始仓库
 git fetch upstream // 拉取原始仓库
 git checkout master // 切换到本地项目需要更新的分支
-git merge upstream/master // 将原始仓库更新合并到本地需要更新仓库
+git rebase upstream/master // 将原始仓库更新合并到本地需要更新仓库
 git push origin master // 推送更新到本地仓库关联的远程仓库(自己github上fork的仓库)
 ```
 
