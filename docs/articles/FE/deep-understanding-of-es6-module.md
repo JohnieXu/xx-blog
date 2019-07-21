@@ -1,15 +1,15 @@
-# 深入理解 ES6 模块
+# ES6模块的核心知识点
 
-## ES6 模块与前 ES6 模块概念区别
+## ES6模块与前ES6模块概念区别
 
--   ES6 基于文件的模块
+-  ES6基于文件的模块
 
-    即一个文件一个模块，在浏览器 web 环境中需要分别加载各个单独的文件模块，而非将其放入一个大的单独文件加载，当然现阶段对于 ES6 的模块都是采用 babel 进行 transpile 然后打包成若干个 UMD 模块。对于考虑是采用单独小文件还是打包后的若干个较大文件，主要是考虑到 HTTP/1.1 高效并发/交替加载多个小文件的性能问题。
+    即一个文件一个模块，在浏览器 web 环境中需要分别加载各个单独的文件模块，而非将其放入一个大的单独文件加载，当然现阶段对于ES6的模块都是采用 babel 进行 transpile 然后打包成若干个[UMD模块](http://www.lessing.online/xx-blog/articles/FE/deep-understanding-of-JS-module.html#umd)。对于考虑是采用单独小文件还是打包后的若干个较大文件，主要是考虑到 HTTP/1.1 高效并发/交替加载多个小文件的性能问题。
 
--   ES6 模块的 API 是静态的
+-  ES6模块的 API 是静态的
 
     即需要在模块的公开 API 中静态定义所有最高层导出，之后无法再添加
-    看下**深入理解 JS 模块**中的例子一个 ES6 模块的例子
+    看下[深入理解 JS 模块](http://www.lessing.online/xx-blog/articles/FE/deep-understanding-of-JS-module.html#%E5%BC%95%E8%A8%80)中的一个ES6模块的例子
 
     ```js
     //模块定义 myModule.js
@@ -29,9 +29,9 @@
 
     上例中导出了 myModule，是一个对象。这里说的 API 是静态的指的是对于上面的模块来说导出的只有 myModule，没有其他的了，但是是可以修改/添加/删除导出的 myModule 对象的属性来间接修改模块导出的 API 的。
 
--   ES6 模块是单例
+-  ES6模块是单例
 
-    即 ES6 模块只有一个单一实例，多个模块中引用同一个的同一个模块，最终都指向对那个唯一的中心实例的引用。
+    即ES6模块只有一个单一实例，多个模块中引用同一个的同一个模块，最终都指向对那个唯一的中心实例的引用。
 
 -   模块暴露的属性和方法不是值的传递而是类似指针的绑定
 
@@ -56,7 +56,7 @@
 
 ### 默认导出
 
-export 导出是对变量的绑定(指针)，export default 导出是对值的绑定，export {a as default}到处是对变量的绑定(指针)
+`export` 导出是对变量的绑定(指针)，`export default` 导出是对值的绑定，`export { a as default }`导出是对变量的绑定(指针)
 
 ```js
 // 模块1
@@ -87,8 +87,6 @@ export function awesome() {
 import foo, { awesome as Awesome }, * as Bar from 'path/to/module';
 ```
 
-以上的 foo 是默认导入，Awesome 为别名导入，Bar 为命名空间导入(讲所有导出导入到 Bar 的命名空间下),注意**所有导入的绑定都是不可变的/或只读的**，同时**import 的声明是提升的，不同于 require 的动态加载**（这里不清楚 webpack 的 import 动态加载怎么做到的）
+以上的 foo 是默认导入，Awesome 为别名导入，Bar 为命名空间导入(讲所有导出导入到 Bar 的命名空间下),注意**所有导入的绑定都是不可变的/或只读的**，同时**import 的声明是提升的，不同于 require 的动态加载**。
 
-## 模块依赖环
-
-// TODO:
+关于**ES6模块动态导入**/**模块循环依赖**以及**ES6模块的原理**可以阅读我写的另一篇文章——[详解ES模块系统](https://www.yuque.com/docs/share/ad354374-4122-4599-973b-aa63943c3b3d)
