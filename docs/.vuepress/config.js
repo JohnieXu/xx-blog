@@ -22,27 +22,19 @@ module.exports = {
                         link: "/articles/BE/web-service-deployment.html"
                     },
                     {
-                        text: "移动端",
-                        link: "/articles/APP/hello-world.html"
-                    },
-                    {
                         text: "跨平台",
-                        link: "/articles/NativeJs/hello-world.html"
+                        link: "/articles/APP/hello-world.html"
                     }
                 ]
             },
             {
-                text: "知乎",
-                link: "https://www.zhihu.com/people/xu-zhi-yong-83/activities"
+                text: "语雀",
+                link: "https://www.yuque.com/johniexu"
             },
             {
                 text: "简书",
                 link: "https://www.jianshu.com/u/ed68ae2b7d50"
             }
-            // {
-            //   text: 'GitHub',
-            //   link: 'https://github.com/JohnieXu'
-            // }
         ],
         sidebar: {
             "/articles/FE/": [

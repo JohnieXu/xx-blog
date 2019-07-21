@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /home-image.jpg
-actionText: 开始探索 →
+actionText: 开始吧👋
 actionLink: /articles/FE/FE-file-upload.html
 features:
 - title: 宁静
