@@ -322,6 +322,18 @@ git rm path/to/module // 移除子模块文件夹
 git commit -am update // commit
 ```
 
+### 合并其他分支的文件
+**适用场景**: 在一个项目的多个分支中同时有个多个feature等分支，想把某一个分支的部分文件的修改合并到另一个分支上
+
+```bash
+git checkout --patch [branch_name] [target_file_path] // 接下来根据提示确认要合并的修改
+```
+
+**补充说明:**
+
+- `branch_name`：需要合并的文件所在分支
+- `target_file_path`：需要合并的文件的地址
+
 ## 实际使用流程
 
 ### 基本配置
