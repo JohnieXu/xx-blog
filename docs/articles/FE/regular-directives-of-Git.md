@@ -284,8 +284,24 @@ git stash pop // 将之前暂存的修改放到dev分支, 此时处于处于modi
 
 ```bash{2}
 git log --diff-filter=D --summary // 查找删除文件的记录， 获取对应的commitID及要恢复的文件路径filepath
-git checkout $commitID~1 filepath // 恢复filepath这个文件， 原理： 撤回filepath这个文件到上次(～1)提交的commit状态
+git checkout <commitID>~1 filepath // 恢复filepath这个文件， 原理： 撤回filepath这个文件到上次(～1)提交的commit状态
 ```
+### 撤回commit记录
+
+**适用场景**:
+1. 本地仓库里面进行了大量代码更新，并且已经commit过了，或者commit过很多次，然后推送到了远程仓库，后来发现这其中有些commit存在较大问题，希望退回远程仓库提交记录；
+2. 在一个本地仓库里面错误的关联了另一个远程仓库，在推送代码到远程仓库时候没有确认远程仓库地址是否正确，导致错误的将错误的代码推送到了远程仓库，希望回退远程仓库提交记录。
+
+```bash
+git log --graph // 查看commit记录，找到希望保留的最近一次推送记录的commitId
+git reset <commitID> --hard // 将本地仓库切换到刚刚找到的commitID，此时本地仓库已经退回至之前的commit记录
+git push origin <branchName> -f // 将本地仓库强制推送到远程仓库，本地已经回退的提交记录将覆盖远程仓库
+```
+
+**补充说明:**
+
+- `commitID`：希望退回到的提交记录ID
+- `branchName`：需要推送的分支名
 
 ### 更新fork的项目
 
