@@ -303,6 +303,10 @@ git push origin <branchName> -f // 将本地仓库强制推送到远程仓库，
 - `commitID`：希望退回到的提交记录ID
 - `branchName`：需要推送的分支名
 
+::: tip 找回误删的commit
+如果错误的将某个commit记录撤回了，可以通过`git reflog`查看最近所有的commit操作记录，通过记录的commitId使用上面第二步进行恢复被误删的commit
+:::
+
 ### 更新fork的项目
 
 **适用场景**: 在github上fork了一份他人的项目， 后来他人的项目更新了， 自己fork的这一份也想更新。
