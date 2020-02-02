@@ -1,6 +1,6 @@
 {
-  "name": "xxblog",
-  "short_name": "JohnieXu's Blog",
+  "name": "JohnieXu's Blog",
+  "short_name": "xxblog",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
