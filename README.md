@@ -3,7 +3,11 @@
 > 个人博客项目，项目地址：https://blog.lessing.online/ （备用地址：https://www.lessing.online/xx-blog/ 这是github的pages服务）
 
 <p align="center">
-  <img src="/static/imgs/screenshot_home.png" width="600" />
+  <img src="./static/imgs/screenshot_home.png" width="600" />
+</p>
+
+<p align="center">
+  <img src="https://i.loli.net/2020/02/04/yj6f3pJobExY78N.png" width="600" />
 </p>
 
 ## install
