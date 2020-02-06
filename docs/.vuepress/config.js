@@ -16,7 +16,7 @@ module.exports = {
                 items: [
                     {
                         text: "前端",
-                        link: "/articles/FE/FE-file-upload.html"
+                        link: "/articles/FE/regular-directives-of-Git"
                     },
                     // {
                     //     text: "后端",
@@ -40,8 +40,8 @@ module.exports = {
         sidebar: {
             "/articles/FE/": [
                 // '',     /* /articles/FE/ */
-                "FE-file-upload" /* /articles/FE/FE-file-upload.html */,
                 "regular-directives-of-Git" /* /articles/FE/regular-directives-of-Git.html */,
+                "FE-file-upload" /* /articles/FE/FE-file-upload.html */,
                 "deep-understanding-of-JS-module",
                 "prototype-of-JS",
                 "deep-understanding-of-es6-module",
@@ -49,7 +49,8 @@ module.exports = {
                 "video.js-in-react",
                 "react-quill-in-react",
                 "react-component-encapsulation",
-                "frontend-interview"
+                "frontend-interview",
+                "Talk-about-the-pit-encountered-in-the-implementation-of-Vue-routing-component-cache"
             ],
             "/articles/BE/": [
                 // '',
