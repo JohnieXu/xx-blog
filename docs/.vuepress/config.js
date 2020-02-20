@@ -50,7 +50,8 @@ module.exports = {
                 "react-quill-in-react",
                 "react-component-encapsulation",
                 "frontend-interview",
-                "Talk-about-the-pit-encountered-in-the-implementation-of-Vue-routing-component-cache"
+                "Talk-about-the-pit-encountered-in-the-implementation-of-Vue-routing-component-cache",
+                "Take-you-to-analyze-the-source-code-of-Vue-router"
             ],
             "/articles/BE/": [
                 // '',
