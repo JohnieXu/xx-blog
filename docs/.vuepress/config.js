@@ -13,6 +13,7 @@ module.exports = {
             },
             {
                 text: "文章专栏",
+                icon: "reco-blog",
                 items: [
                     {
                         text: "硬核前端",

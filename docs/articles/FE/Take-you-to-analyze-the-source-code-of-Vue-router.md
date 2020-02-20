@@ -1,4 +1,5 @@
 ---
+date: 2020-2-13
 tags:
   - 前端进阶
   - 源码分析
@@ -11,6 +12,7 @@ tags:
 
 > 本文分析的源码为vue-router@3.1.3，vue@2.6.11
 
+<!-- more -->
 
 # 万丈高楼平地起
 参考官网的[起步中](https://router.vuejs.org/zh/guide/#javascript)的使用实例，vue-router的基本思路是根据路由记录生成VueRouter实例并传入Vue的app实例的router属性上，同时使用router-view来挂载路由匹配的路由组件到页面某一位置。
