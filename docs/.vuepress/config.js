@@ -12,10 +12,10 @@ module.exports = {
                 link: "/"
             },
             {
-                text: "精粹",
+                text: "文章专栏",
                 items: [
                     {
-                        text: "前端",
+                        text: "硬核前端",
                         link: "/articles/FE/regular-directives-of-Git"
                     },
                     // {
@@ -33,8 +33,8 @@ module.exports = {
                 link: "https://www.yuque.com/johniexu"
             },
             {
-                text: "简书",
-                link: "https://www.jianshu.com/u/ed68ae2b7d50"
+                text: "掘金",
+                link: "https://juejin.im/user/59eb44426fb9a045000230b8"
             }
         ],
         sidebar: {
