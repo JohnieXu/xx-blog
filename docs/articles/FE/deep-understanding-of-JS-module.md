@@ -2,9 +2,9 @@
 
 ## 引言
 
-`JavaScript`的模块机制其实是借鉴的其他程序设计语言的, 如Java中package的概念, `import java.util.ArrayList;`; package就是逻辑上相关的代码组织到同一个包内，包内是一个相对独立的作用域，不用担心命名冲突等等, 当需要在外部使用的是否直接import相应的package即可。
+`JavaScript`的模块机制其实是借鉴的其他程序设计语言的, 如Java中package的概念, `import java.util.ArrayList;`; package就是逻辑上相关的代码组织到同一个包内，包内是一个相对独立的作用域，不用担心命名冲突等等, 当需要在外部使用的时候直接import相应的package即可。
 
-由于`JavaScript`在设计之初的定位原因, 并没有提供类似模块的功能, 随后便出现了各种**模拟**类似的功能的规范。到今天(2018-5-28)ES6已经十分普及, ES6的模块机制已经大规模使用, 我们完全可以使用ES6提供的模块化规范(机制)。
+由于`JavaScript`在设计之初的定位原因, 并没有提供类似模块的功能, 随后便出现了各种**模拟**类似功能的规范。到今天(2018-5-28)ES6已经十分普及, ES6的模块机制已经大规模使用, 我们完全可以使用ES6提供的模块化规范(机制)。
 
 ## 类模块化
 
@@ -22,10 +22,9 @@ function func2(){
     ...
 }
 ```
-引用模块也即是调用函数, 存在污染全局变量的缺点, 变量冲突等缺点。
+引用模块也即是调用函数, 这种函数定义的方式是直接采用`script`来加载执行的(不经过模块打包器处理), 故函数是挂载在全局`window`对象上, 因此**存在污染全局变量的缺点和变量冲突等缺点**。
 
 ### 对象
-
 
 ```js
 var myModule = {
@@ -63,15 +62,19 @@ var myModule = (function(){
 
 在上面对象的基础之上, 用立即执行函数进行封装, 可以解决全局变量污染, 防止模块内部属性和方法被外部修改, 这是当前主流模块规范的基础。
 
+:::warning 注意
+这里的随意修改指的是：可以通过`myModule.func1 = 'abc'`等赋值方式来修改掉模块的属性、变量等指向
+:::
+
 ## CommonJS(NodeJS)
 
-**CommonJS**: 通用模块规范, 主要由NodeJS具体实现; 根据CommonJS规范, 一个单独的文件就是一个模块。每一个模块都是一个单独的作用域, 也就是说, 在该模块内部定义的变量, 无法被其他模块读取, 除非定义为global(浏览器中为window)对象的属性。
+**CommonJS**: 通用模块规范, 主要由NodeJS具体实现; 根据CommonJS规范, 一个单独的文件就是一个模块。每一个模块都是一个单独的作用域, 也就是说, **在该模块内部定义的变量无法被其他模块读取**, 除非定义为global(浏览器中为window)对象的属性。
 
 CommonJS模块例子:
 
 ```js
-//模块定义 myModule.js
-var name = 'Byron';
+// 模块定义 myModule.js
+var name = 'myName';
 function printName(){
     console.log(name);
 }
@@ -82,7 +85,7 @@ module.exports = {
     printName: printName,
     printFullName: printFullName
 }
-//加载模块
+// 加载模块
 var myModule = require('./myModule.js');
 myModule.printName();
 ```
@@ -100,7 +103,7 @@ RequireJS模块例子:
 ```js
 // 定义模块 myModule.js
 define('myModule', ['dependency'], function(){
-    var name = 'Byron';
+    var name = 'myName';
     function printName(){
         console.log(name);
     }
@@ -180,6 +183,7 @@ UMD模块例子:
 ```js
 ;(function (global) {
     function factory () {
+        // 具体业务方模块的定义
         var moduleName = {};
         return moduleName;
     }
@@ -195,18 +199,24 @@ UMD模块例子:
 
 UMD模块在不同环境引入:
 ```js
-// Node.js
-var myModule = require('moduleName');
+// RequireJs
+define('moduleName', ['otherModule'], function (moduleName) {
+  console.log(moduleName)
+});
+
 // SeaJs
 define(function (require, exports, module) {
     var myModule = require('moduleName');
 });
-// RequireJs
-define(['moduleName'], function (moduleName) {
 
-});
-// Browse global
+// Node.js
+var myModule = require('moduleName');
+
+// Browser global
 <script src="moduleName.js"></script>
+<script type="text/javascript">
+  console.log(moduleName)
+</script>
 ```
 
 ## ES6模块(import,export)
@@ -215,8 +225,8 @@ ES6在语言标准的层面上, 实现了模块功能, 而且实现得相当简�
 
 ES6模块例子:
 ```js
-//模块定义 myModule.js
-const name = 'Byron';
+// 模块定义 myModule.js
+const name = 'myName';
 function printName(){
     console.log(name);
 }
@@ -229,10 +239,10 @@ const myModule = {
 };
 export myModule;
 
-//加载模块
+// 加载模块
 import myModule, { printFullName } from './myModule.js';
 myModule.printName();
-printFullName('Michael');
+printFullName('myFullName');
 ```
 
 ### 注意
