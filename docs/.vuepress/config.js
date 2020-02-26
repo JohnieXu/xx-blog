@@ -52,7 +52,8 @@ module.exports = {
                 "react-component-encapsulation",
                 "frontend-interview",
                 "Talk-about-the-pit-encountered-in-the-implementation-of-Vue-routing-component-cache",
-                "Take-you-to-analyze-the-source-code-of-Vue-router"
+                "Take-you-to-analyze-the-source-code-of-Vue-router",
+                "Thoroughly-understand-DOM-event-mechanism"
             ],
             "/articles/BE/": [
                 // '',
