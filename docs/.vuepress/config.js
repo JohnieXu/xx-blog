@@ -3,7 +3,7 @@ module.exports = {
     title: "JohnieXu's Blog",
     description: "哪里会有人喜欢孤独，不过是不喜欢失望罢了。    ——村上春树",
     base: "/xx-blog/",
-    base: "/",
+    // base: "/",
     dest: "dist",
     theme: 'reco',
     themeConfig: {
