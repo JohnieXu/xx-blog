@@ -3,9 +3,11 @@ module.exports = {
     title: "JohnieXu's Blog",
     description: "哪里会有人喜欢孤独，不过是不喜欢失望罢了。    ——村上春树",
     base: "/xx-blog/",
+    base: "/",
     dest: "dist",
     theme: 'reco',
     themeConfig: {
+        type: 'blog',
         nav: [
             {
                 text: "首页",
@@ -82,12 +84,13 @@ module.exports = {
           //   location: 2,     // 在导航栏菜单中所占的位置，默认2
           //   text: 'Category' // 默认文案 “分类”
           // },
-          tag: {
-            location: 3,     // 在导航栏菜单中所占的位置，默认3
-            text: 'Tag'      // 默认文案 “标签”
-          }
+          // tag: {
+          //   location: 3,     // 在导航栏菜单中所占的位置，默认3
+          //   text: 'Tag'      // 默认文案 “标签”
+          // }
         },
         author: 'JohnieXu',
+        authorAvatar: 'avatar.jpeg',
         displayAllHeaders: false,
         sidebarDepth: 2,
         repo: "JohnieXu/xx-blog",

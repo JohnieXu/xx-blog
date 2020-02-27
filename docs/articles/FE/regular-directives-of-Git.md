@@ -1,4 +1,7 @@
 ---
+categories:
+  - 工具笔记
+  - 前端工具
 tags:
   - git
   - 前端工具
@@ -22,6 +25,8 @@ git config -l // 查看git全局配置信息
 or
 git config --list
 ```
+
+<!-- more -->
 
 ### 配置公钥
 
