@@ -1,4 +1,5 @@
 ---
+title: Git常用命令整理
 categories:
   - 工具笔记
   - 前端工具
@@ -7,9 +8,13 @@ tags:
   - 前端工具
 ---
 
-# Git常用命令整理
+## 全文目录速览
 
-## 配置命令
+[[toc]]
+
+----
+
+## 一、配置命令
 
 ### 配置用户名和邮箱
 
@@ -34,7 +39,7 @@ git config --list
 ssh-keygen -t rsa -C "281910378@qq.com" // 采用rsa加密算法生成git公钥，前提是用户名和邮箱已经设置好且此处邮箱与前面配置邮箱保持一直
 ```
 
-## 常用命令
+## 二、常用命令
 
 ### 初始化项目
 
@@ -254,7 +259,7 @@ git tag -d v0.9 // 本地删除v0.9这一个标签
 git push origin :refs/tags/v0.9 // 删除origin关联的远程仓库的v0.9这一标签(删除也用push), 这是github删除远程仓库标签, coding等其他的远程仓库未测试
 ```
 
-## 进阶命令
+## 三、进阶命令
 
 ### 多个远程仓库管理
 
@@ -365,7 +370,34 @@ git checkout --patch [branch_name] [target_file_path] // 接下来根据提示�
 - `branch_name`：需要合并的文件所在分支
 - `target_file_path`：需要合并的文件的地址
 
-## 实际使用流程
+### 切换到远程特定分支
+**适用场景**: 
+1. 在进行项目克隆时使用常规的`git clone ....`命令克隆的完整的项目，是包含所有的分支和标签的，但是用`git branch`查看只会看到master分支；
+2. 另一种情况是在克隆项目为了减小克隆文件大小，采用`git clone --depth=1 ...`只克隆`master`分支上最近一次`commit`，这时候项目只有`master`分支；
+
+这时候希望切换到远程仓库其他的分支，而直接`git checkout branch_name`是不生效的（本地没有对应分支）
+
+情况一：
+
+```bash
+git checkout -b 3.x-table origin/2.x-stable // 拉取远程的3.x-stable分支并关联到本地3.x-stable分支
+```
+
+情况二：
+
+```bash
+git branch -va // 卡看全部本地和远程分支，发现远程也没有3.x-stalbe分支
+git remote set-branches origin "3.x-stable"
+git fetch --depth=1 origin 3.x-stable // 拉取上一步自行关联的3.x-stable分支
+```
+
+实际操作结果如下：
+
+![拉取ant-design3.x-stable分支](https://tva1.sinaimg.cn/large/00831rSTgy1gcchgd9brrj30va06etb3.jpg)
+
+> 拉取ant-design3.x-stable分支
+
+## 四、实际使用流程
 
 ### 基本配置
 
@@ -477,7 +509,9 @@ git pull origin dev // 将远程仓库dev分支更新拉取到本地并尝试快
 
 ![修复冲突](~@imgs/39633bfe-48f6-4b37-96b2-af9d834259e8.png)
 
-> 注意：代码冲突解决完毕 === 不存在任何的`<<<<<<<` `=======` `>>>>>>>`标识
+:::tip 注意
+代码冲突解决完毕 === 不存在任何的`<<<<<<<` `=======` `>>>>>>>`标识
+:::
 
 - **推送更到到远程仓库**
 
@@ -546,11 +580,13 @@ git push origin dev // 推送本地dev分支到远程仓库origin的dev上
 git push origin master --tags // 当存在tags时可以顺便推送tags到远程仓库
 ```
 
-后面的操作与[场景一]()的用法一致不再赘述
+后面的操作与[场景一](#场景一：从远程克隆项目)的用法一致不再赘述
 
-## Git不是万能的
+## 五、Git不是万能的
 
-> 这里主要说的是对Git设计思想方面的思考（就是一些废话，可略过）
+:::tip
+这里主要说的是对Git设计思想方面的思考（就是一些废话，可略过）
+:::
 
 ### 如何理解分支
 
@@ -567,3 +603,9 @@ git push origin master --tags // 当存在tags时可以顺便推送tags到远程
 随着`master`分支的不断更新，总会在某个时间点恰好满足了当时的开发需求，于是此时就可以打个`tag`标签，可类比于自己特定情况下达成的一个小目标。
 
 Git本身就是一套管理规则，纵使你提交了无数个`commit`， 打了无数个`tag`，它也不会帮你成为“海贼王”找到`one piece`。就像各种技术的设计思想一样，Git本身也是源自于生活，也最终会回到生活。生活一样也没有万能的东西，且行且珍惜～
+
+## 全文目录速览
+
+[[toc]]
+
+----
