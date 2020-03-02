@@ -13,9 +13,9 @@ tags:
 ## 背景介绍
 最近在做公司后台管理系统项目时遇到一个比较怪异的bug——采用`keep-alive+vue-router`实现的路由缓存遇到**缓存不生效**的情况。
 
-![项目预览](~@imgs/7dd6b400-44bb-4d92-9d1f-e040c0a4a16c.png)
-
 <!-- more -->
+
+![项目预览](~@imgs/7dd6b400-44bb-4d92-9d1f-e040c0a4a16c.png)
 
 <a name="2VhOm"></a>
 ## 项目背景

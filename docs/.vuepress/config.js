@@ -55,7 +55,8 @@ module.exports = {
                 "frontend-interview",
                 "Talk-about-the-pit-encountered-in-the-implementation-of-Vue-routing-component-cache",
                 "Take-you-to-analyze-the-source-code-of-Vue-router",
-                "Thoroughly-understand-DOM-event-mechanism"
+                "Thoroughly-understand-DOM-event-mechanism",
+                "A-comprehensive-analysis-and-summary-of-BFC-principle-and-Practice"
             ],
             "/articles/BE/": [
                 // '',
@@ -118,7 +119,8 @@ module.exports = {
       ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
       ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
       ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
-      ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+      ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
+      ['meta', { name: 'google-site-verification', content: 'VJDAfmKkQi_fst1HyzcNY4ifwP5w7EhLCXjjO8qgXqM' }]
     ],
     plugins: [
       ['@vuepress/google-analytics', {

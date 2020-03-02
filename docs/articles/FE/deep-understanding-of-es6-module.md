@@ -11,6 +11,8 @@ tags:
 
     即一个文件一个模块，在浏览器 web 环境中需要分别加载各个单独的文件模块，而非将其放入一个大的单独文件加载，当然现阶段对于ES6的模块都是采用 babel 进行 transpile 然后打包成若干个[UMD模块](http://www.lessing.online/xx-blog/articles/FE/deep-understanding-of-JS-module.html#umd)。对于考虑是采用单独小文件还是打包后的若干个较大文件，主要是考虑到 HTTP/1.1 高效并发/交替加载多个小文件的性能问题。
 
+<!-- more -->
+
 -  ES6模块的 API 是静态的
 
     即需要在模块的公开 API 中静态定义所有最高层导出，之后无法再添加
