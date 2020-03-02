@@ -1,9 +1,13 @@
 var path = require("path");
+
+// TODO: 区分打包路径
+// const PUBLISH_PATH = process.env.PUBLISH_PATH || '/xx-blog/'
+const PUBLISH_PATH = '/xx-blog/'
+
 module.exports = {
     title: "JohnieXu's Blog",
     description: "哪里会有人喜欢孤独，不过是不喜欢失望罢了。    ——村上春树",
-    base: "/xx-blog/",
-    // base: "/",
+    base: PUBLISH_PATH,
     dest: "dist",
     theme: 'reco',
     themeConfig: {
@@ -134,5 +138,8 @@ module.exports = {
         // },
         updatePopup: true
       }],
+      ['sitemap', {
+        hostname: 'https://blog.lessing.online' + PUBLISH_PATH
+      }]
     ]
 };
