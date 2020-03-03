@@ -72,7 +72,7 @@ npm run deploy:build || yarn deploy:build
 </a>
 
 <a href="https://mp.weixin.qq.com/s/weo4Kvs8L4aLVM8fWqo5jQ" class="item" >
-  <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gcgutpiwiaj30sq0783yo.jpg" width="150px" height="150px" />
+  <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gcgutpiwiaj30sq0783yo.jpg" height="150px" />
 </a>
 
 
