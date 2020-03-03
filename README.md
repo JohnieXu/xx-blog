@@ -1,18 +1,20 @@
-# xx-blog
+# 迪诺笔记——JohnieXu's Blog
 
-> 个人博客项目，项目地址：https://blog.lessing.online/ （备用地址：https://www.lessing.online/xx-blog/ 这是github的pages服务）
+> 我的个人博客，项目地址：https://blog.lessing.online/ （备用地址：https://www.lessing.online/xx-blog/ 这是github的pages服务）
 
 <p align="center">
-  <img src="https://i.loli.net/2020/02/04/yj6f3pJobExY78N.png" width="600" />
+  <img src="https://tva1.sinaimg.cn/large/00831rSTly1gcgunux3fyj31gd0u0aek.jpg" width="600" />
 </p>
 
-## install
+## 开发部署
+
+### install
 
 ```bash
 npm i || yarn
 ```
 
-## publish
+### publish
 
 - publish to github
 
@@ -57,3 +59,30 @@ npm run deploy:build || yarn deploy:build
     git commit -m udpate
     git push coding coding-pages
     ```
+
+## 推荐关注
+你可以在这里位置关注到我
+
+<a href="https://juejin.im/user/59eb44426fb9a045000230b8" >
+  <img src="https://tva1.sinaimg.cn/large/00831rSTly1gcguelpq3xj3062032t8j.jpg"  width="220px" height="110px" /> 
+</a>
+
+<a href="https://segmentfault.com/u/johniexu" class="item" >
+  <img src="https://tva1.sinaimg.cn/large/00831rSTly1gcgufm82a6j309q09qjr8.jpg" width="150px" height="150px" />
+</a>
+
+<a href="https://mp.weixin.qq.com/s/weo4Kvs8L4aLVM8fWqo5jQ" class="item" >
+  <img src="https://tva1.sinaimg.cn/large/00831rSTly1gcguig4gq7j3076092mx4.jpg" width="150px" height="150px" />
+</a>
+
+
+## 版权声明
+
+所有原创文章（除翻译文章外的所有文章）的著作权属于 **JohnieXu**
+
+转载注意事项：
+
+你可以在非商业的前提下免费转载，但同时你必须：
+
+- 明确署名，即至少注明 作者：JohnieXu 字样以及文章的原始链接。
+如需商业合作，请直接联系作者。
