@@ -72,7 +72,7 @@ npm run deploy:build || yarn deploy:build
 </a>
 
 <a href="https://mp.weixin.qq.com/s/weo4Kvs8L4aLVM8fWqo5jQ" class="item" >
-  <img src="https://tva1.sinaimg.cn/large/00831rSTly1gcguig4gq7j3076092mx4.jpg" width="150px" height="150px" />
+  <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gcgutpiwiaj30sq0783yo.jpg" width="150px" height="150px" />
 </a>
 
 
@@ -85,4 +85,5 @@ npm run deploy:build || yarn deploy:build
 你可以在非商业的前提下免费转载，但同时你必须：
 
 - 明确署名，即至少注明 作者：JohnieXu 字样以及文章的原始链接。
+
 如需商业合作，请直接联系作者。
