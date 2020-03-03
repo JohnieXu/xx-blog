@@ -5,7 +5,7 @@ var path = require("path");
 const PUBLISH_PATH = '/xx-blog/'
 
 module.exports = {
-    title: "JohnieXu's Blog",
+    title: "迪诺笔记",
     description: "哪里会有人喜欢孤独，不过是不喜欢失望罢了。    ——村上春树",
     base: PUBLISH_PATH,
     dest: "dist",
@@ -128,7 +128,7 @@ module.exports = {
     ],
     plugins: [
       ['@vuepress/google-analytics', {
-        ga: 'gagagaga'
+        ga: 'G-1HXVHRSBB0'
       }],
       ['@vuepress/pwa', {
         serviceWorker: true,
