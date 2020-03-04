@@ -1,6 +1,14 @@
-# JS 原型链
+---
+title: JS原型链
+categories:
+  - 硬核前端
+tags:
+  - 前端核心
+  - 前端进阶
+---
+# JS原型链
 
-## 引言
+## 前言
 
 思考以下几个问题：
 
@@ -65,13 +73,16 @@ new Foo().getName(); // -> 2   等价于(new Foo()).getName() 调用的是实例
 
 ### 构造函数/原型/实例对象
 
-上例中的`let M = function(a) {this.a = a;}`M 就是一个构造函数；构造函数拥有`prototype`属性，其指向原型对象，原型对象拥有`constructor`属性只想该构造函数；通过`o3 = new M('aaa');`即创建了 o3 这个实例对象，实例对象的`__proto__`指向构造函数的`prototype`也就是原型对象;
+上例中的`let M = function(a) {this.a = a;}`M 就是一个构造函数；构造函数拥有`prototype`属性，其指向原型对象，原型对象拥有`constructor`属性指向该构造函数；通过`o3 = new M('aaa');`即创建了 o3 这个实例对象，实例对象的`__proto__`指向构造函数的`prototype`也就是原型对象;
 
 对象拥有`__proto__`属性，指向原型对象，而构造函数也是对象(准确来说是`Function`的实例对象)，故上述构造函数 M 拥有`__proto__`属性，因此这里就产生了一个类似这样的链条
 
-// TODO: 原型链如何产生
+:::warning 待补充
+原型链如何产生
+
 o3.**proto** => M.prototype =>
 M.**proto** => Function.prototype => Object.prototype
+:::
 
 `instanceof`可以正确的判断对象的类型，因为内部机制是通过判断对象的原型链中是不是能找到类型的`prototype`。
 
@@ -123,4 +134,6 @@ console.log(c.a);
 // 还有种就是利用 call，apply，bind 改变 this，这个优先级仅次于 new
 ```
 
-TODO: 通过原型链来解释 this 的指向问题
+:::warning 待补充
+通过原型链来解释 this 的指向问题
+:::
