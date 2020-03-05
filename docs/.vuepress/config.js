@@ -6,7 +6,7 @@ const OSS_BASE_PATH = 'https://lessing.oss-cn-beijing.aliyuncs.com/blog/'
 const CODING_BASE_PATH = '/'
 let PUBLISH_PATH = '/xx-blog/'
 
-PUBLISH_PATH = OSS_BASE_PATH // 默认部署阿里云oss
+PUBLISH_PATH = CODING_BASE_PATH // 默认根路径
 
 module.exports = {
     title: "迪诺笔记",
