@@ -1,6 +1,6 @@
 var path = require("path");
 
-// TODO: 区分打包路径
+// FIXME: manifest.json service-worker.js不能放到oss上存储，会导致跨域访问文件失败
 // const PUBLISH_PATH = process.env.PUBLISH_PATH || '/xx-blog/'
 const OSS_BASE_PATH = 'https://lessing.oss-cn-beijing.aliyuncs.com/blog/'
 const CODING_BASE_PATH = '/'
