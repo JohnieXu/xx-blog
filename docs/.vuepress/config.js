@@ -2,7 +2,11 @@ var path = require("path");
 
 // TODO: 区分打包路径
 // const PUBLISH_PATH = process.env.PUBLISH_PATH || '/xx-blog/'
-const PUBLISH_PATH = '/xx-blog/'
+const OSS_BASE_PATH = 'https://lessing.oss-cn-beijing.aliyuncs.com/blog/'
+const CODING_BASE_PATH = '/'
+let PUBLISH_PATH = '/xx-blog/'
+
+PUBLISH_PATH = OSS_BASE_PATH
 
 module.exports = {
     title: "迪诺笔记",
@@ -139,7 +143,7 @@ module.exports = {
         updatePopup: true
       }],
       ['sitemap', {
-        hostname: 'https://blog.lessing.online' + PUBLISH_PATH
+        hostname: /^http/.test(PUBLISH_PATH) ? 'https://blog.lessing.online' : 'https://blog.lessing.online' + PUBLISH_PATH
       }]
     ]
 };
