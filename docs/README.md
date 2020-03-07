@@ -1,7 +1,7 @@
 ---
 home: true
 # heroImage: /home-image.jpg
-bgImage: /home-bg.png
+bgImage: /home-bg2.jpg
 bgImageStyle: {
   height: 280px
 }

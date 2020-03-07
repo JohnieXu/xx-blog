@@ -1,5 +1,7 @@
 var path = require("path");
 
+// #3eaf7c
+
 // FIXME: manifest.json service-worker.js不能放到oss上存储，会导致跨域访问文件失败
 // const PUBLISH_PATH = process.env.PUBLISH_PATH || '/xx-blog/'
 const OSS_BASE_PATH = 'https://lessing.oss-cn-beijing.aliyuncs.com/blog/'
@@ -28,6 +30,10 @@ module.exports = {
                     {
                         text: "硬核前端",
                         link: "/articles/FE/regular-directives-of-Git"
+                    },
+                    {
+                        text: "UI设计",
+                        link: "/articles/UI/miniprogram-design-pattern"
                     },
                     // {
                     //     text: "后端",
@@ -81,7 +87,7 @@ module.exports = {
                 "hello-VuePress"
             ],
             // fallback
-            "/articles/": ["" /* /articles/ */]
+            "/articles/": false
         },
         valineConfig: {
           // https://leancloud.cn/dashboard/app.html?appid=dVMwFciWpUqAb2YNjKM3VrsG-gzGzoHsz#/key
@@ -121,11 +127,13 @@ module.exports = {
       ['script', { src: 'https://hm.baidu.com/hm.js?6d4a99079a9531464d70b917d3d7449d' }],
       ['link', { rel: 'icon', href: '/logo.png' }],
       ['link', { rel: 'manifest', href: '/manifest.json' }],
-      ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+      ['meta', { name: 'keywords', content: '前端博客,开发经验,前端进阶,源码分析,读书笔记,JohnieXu' }],
+      ['meta', { name: 'theme-color', content: '#FAD95C' }],
+      ['meta', { name: 'apple-touch-fullscreen', content: 'yes' }],
       ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
       ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
       ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
-      ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
+      ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#FAD95C' }],
       ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
       ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
       ['meta', { name: 'google-site-verification', content: 'VJDAfmKkQi_fst1HyzcNY4ifwP5w7EhLCXjjO8qgXqM' }]
@@ -136,10 +144,10 @@ module.exports = {
       }],
       ['@vuepress/pwa', {
         serviceWorker: true,
-        // updatePopup: {
-        //   message: '发现新内容可用',
-        //   buttonText: '刷新'
-        // },
+        updatePopup: {
+          message: 'Get到了一波新技能',
+          buttonText: '更新'
+        },
         updatePopup: true
       }],
       ['sitemap', {
