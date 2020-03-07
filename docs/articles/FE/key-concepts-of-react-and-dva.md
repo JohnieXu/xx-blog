@@ -1,4 +1,6 @@
-# Ract和Dva的一些核心概念
+---
+title: Ract和Dva的一些核心概念
+---
 
 ## React
 

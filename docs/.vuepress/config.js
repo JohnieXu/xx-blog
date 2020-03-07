@@ -29,7 +29,8 @@ module.exports = {
                 items: [
                     {
                         text: "硬核前端",
-                        link: "/articles/FE/regular-directives-of-Git"
+                        // link: "/articles/FE/regular-directives-of-Git"
+                        link: "/articles/FE/"
                     },
                     {
                         text: "UI设计",
