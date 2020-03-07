@@ -47,6 +47,11 @@ module.exports = {
                 ]
             },
             {
+              text: "实战分享",
+              icon: "reco-other",
+              link: "/articles/PRACTICE/"
+            },
+            {
                 text: "语雀",
                 link: "https://www.yuque.com/johniexu"
             },
