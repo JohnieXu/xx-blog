@@ -33,6 +33,10 @@ module.exports = {
                         link: "/articles/FE/"
                     },
                     {
+                        text: 'GO笔记',
+                        link: "/articles/GO/GO笔记-错误捕获"
+                    },
+                    {
                         text: "UI设计",
                         link: "/articles/UI/miniprogram-design-pattern"
                     },
