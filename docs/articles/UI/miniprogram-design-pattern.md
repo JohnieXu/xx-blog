@@ -6,6 +6,10 @@ tags:
   - 学习笔记
 ---
 
+## 界面说明
+
+![](https://tva1.sinaimg.cn/large/00831rSTly1gcthrlm7xij30ua0u0jsb.jpg)
+
 ## 尺寸规范
 
 ![](https://tva1.sinaimg.cn/large/00831rSTly1gcl3r3uvzdj30qi16agon.jpg)
