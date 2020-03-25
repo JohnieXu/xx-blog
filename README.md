@@ -1,6 +1,10 @@
 # 迪诺笔记——JohnieXu's Blog
 
-> 我的个人博客，项目地址：https://blog.lessing.online/ （备用地址：https://www.lessing.online/xx-blog/ 这是github的pages服务）
+> 我的个人博客
+> 
+> 项目地址：https://blog.lessing.online/
+> 
+> 备用地址：https://www.lessing.online/xx-blog/（github-pages）
 
 <p align="center">
   <img src="https://tva1.sinaimg.cn/large/00831rSTly1gcgunux3fyj31gd0u0aek.jpg" width="600" />
