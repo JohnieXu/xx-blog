@@ -175,7 +175,7 @@ module.exports = {
     [
       "@vuepress/pwa",
       {
-        serviceWorker: true,
+        serviceWorker: false,
         updatePopup: {
           message: "Get到了一波新技能",
           buttonText: "更新"
