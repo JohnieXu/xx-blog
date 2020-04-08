@@ -1,6 +1,7 @@
 ---
 title: 聊一聊实现Vue路由组件缓存遇到的’坑‘
-date: 2020-2-20
+created: 2020-02-20
+updated: 2020-02-20
 categories:
     - 文章专栏
     - 硬核前端
