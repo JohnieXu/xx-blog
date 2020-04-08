@@ -313,13 +313,13 @@ module.exports = {
     ],
     [
       "link",
-      { rel: "apple-touch-icon", href: "/icons/apple-touch-icon-152x152.png" }
+      { rel: "apple-touch-icon", href: "/logo.png" }
     ],
     [
       "link",
       {
         rel: "mask-icon",
-        href: "/icons/safari-pinned-tab.svg",
+        href: "/logo.png",
         color: "#FAD95C"
       }
     ],
@@ -327,7 +327,7 @@ module.exports = {
       "meta",
       {
         name: "msapplication-TileImage",
-        content: "/icons/msapplication-icon-144x144.png"
+        content: "/logo.png"
       }
     ],
     ["meta", { name: "msapplication-TileColor", content: "#000000" }],
