@@ -163,6 +163,12 @@ module.exports = {
         name: "google-site-verification",
         content: "VJDAfmKkQi_fst1HyzcNY4ifwP5w7EhLCXjjO8qgXqM"
       }
+    ],
+    [
+      "meta", {
+        name: "baidu-site-verification",
+        content: "8xYgZOGSrO"
+      }
     ]
   ],
   plugins: [

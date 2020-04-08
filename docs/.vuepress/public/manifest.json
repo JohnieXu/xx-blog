@@ -2,7 +2,7 @@
   "name": "迪诺笔记",
   "short_name": "迪诺笔记",
   "start_url": ".",
-  "display": "minimal-ui",
+  "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#FAD95C",
   "description": "哪里会有人喜欢孤独，不过是不喜欢失望罢了。 ——村上春树",
