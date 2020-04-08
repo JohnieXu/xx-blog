@@ -33,11 +33,11 @@ module.exports = {
           },
           {
             text: "GO笔记",
-            link: "/articles/GO/GO笔记-错误捕获"
+            link: "/articles/GO/"
           },
           {
             text: "UI设计",
-            link: "/articles/UI/miniprogram-design-pattern"
+            link: "/articles/UI/"
           }
         ]
       },
@@ -172,16 +172,16 @@ module.exports = {
         ga: "G-1HXVHRSBB0"
       }
     ],
-    [
-      "@vuepress/pwa",
-      {
-        serviceWorker: false,
-        updatePopup: {
-          message: "Get到了一波新技能",
-          buttonText: "更新"
-        }
-      }
-    ],
+    // [
+    //   "@vuepress/pwa",
+    //   {
+    //     serviceWorker: false,
+    //     updatePopup: {
+    //       message: "Get到了一波新技能",
+    //       buttonText: "更新"
+    //     }
+    //   }
+    // ],
     [
       "sitemap",
       {
