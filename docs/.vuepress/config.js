@@ -15,7 +15,7 @@ module.exports = {
   description: "哪里会有人喜欢孤独，不过是不喜欢失望罢了。    ——村上春树",
   base: PUBLISH_PATH,
   dest: "dist",
-  theme: "reco",
+  // theme: "reco",
   themeConfig: {
     type: "blog",
     nav: [
@@ -172,16 +172,16 @@ module.exports = {
         ga: "G-1HXVHRSBB0"
       }
     ],
-    // [
-    //   "@vuepress/pwa",
-    //   {
-    //     serviceWorker: false,
-    //     updatePopup: {
-    //       message: "Get到了一波新技能",
-    //       buttonText: "更新"
-    //     }
-    //   }
-    // ],
+    [
+      "@vuepress/pwa",
+      {
+        serviceWorker: true,
+        updatePopup: {
+          message: "Get到了一波新技能",
+          buttonText: "更新"
+        }
+      }
+    ],
     [
       "sitemap",
       {
