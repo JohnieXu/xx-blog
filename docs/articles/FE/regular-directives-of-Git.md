@@ -397,6 +397,20 @@ git fetch --depth=1 origin 3.x-stable // 拉取上一步自行关联的3.x-stabl
 
 > 拉取ant-design3.x-stable分支
 
+### 更新克隆不完整的仓库
+**使用场景**
+在[上一步](#切换到远程特定分支)中克隆远程仓库时使用了`--depth=1`等命令，导致本地仓库不是完整的git仓库，后续希望看到完整的commit提交记录
+
+```bash
+git fetch --unshallow // 使用--unshallow属性来合并到完整的git仓库
+```
+
+实际操作结果如下：
+
+![使用git fetch --unshallow拉取完整的vue-router项目](https://tva1.sinaimg.cn/large/00831rSTgy1gdn9ga0aetj317r0u040w.jpg)
+
+> 使用`git fetch --unshallow`拉取完整的vue-router项目，后续的以及之前的commit记录都可以看到
+
 ## 四、实际使用流程
 
 ### 基本配置
