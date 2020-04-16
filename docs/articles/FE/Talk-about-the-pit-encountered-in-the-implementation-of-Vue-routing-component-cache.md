@@ -42,10 +42,10 @@ tags:
 
 可以排除基本用法的问题，如是继续翻阅[vue的官方文档](https://cn.vuejs.org/v2/guide/components-dynamic-async.html#%E5%9C%A8%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%B8%8A%E4%BD%BF%E7%94%A8-keep-alive)，keep-alive的缓存匹配原理是根据组件的name作为key来进行缓存，官方的提示
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/298369/1580892257851-72ac895b-1ef3-48e4-bc82-a2e17c6cb0b5.png#align=left&display=inline&height=104&name=image.png&originHeight=218&originWidth=1562&size=37857&status=done&style=stroke&width=746)
+![image.png](~@imgs/7f402f00-11d4-4cef-8543-79929256dd6d.png)
 
-随即检查代码中的路由记录的name以及对应component的name，发现都有定义好，因此**排除基本用法的错误导致。**<br />**
-<a name="GDxlV"></a>
+随即检查代码中的路由记录的name以及对应component的name，发现都有定义好，因此**排除基本用法的错误导致。**
+
 ## iview-admin的不完善导致
 进行上述问题排查后定位到此问题出在keep-alive组件的include参数处，keep-alive的参数说明如下：
 
@@ -68,7 +68,7 @@ iview-admin@2.0中通过路由的meata参数——notCache来控制路由对应�
 <a name="bpktj"></a>
 #### iview-admin实现路由组件缓存原理
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/298369/1580975013520-0bc33b1e-a6c5-46d6-b3f2-a37bd6d71a5f.png#align=left&display=inline&height=512&name=image.png&originHeight=959&originWidth=1397&size=111193&status=done&style=stroke&width=746)
+![image.png](~@imgs/04e33871-b8b0-41f7-8ffa-7f45bfded077.png)
 
 iview-admin中将navTagList、menuList等数据保存在全局的vuex的app模块中，navTagList是当前的当前打开过的标签页数组根据路由变化动态更新；menuList是当前登录用户的菜单数组，默认根据路由记录的meta参数的access字段进行过滤
 
