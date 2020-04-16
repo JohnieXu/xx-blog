@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ES6模块的核心知识点 | 迪诺笔记</title>
+    <meta name="description" content="哪里会有人喜欢孤独，不过是不喜欢失望罢了。    ——村上春树">
+    <meta name="generator" content="VuePress 1.4.0">
+    <script src="https://hm.baidu.com/hm.js?6d4a99079a9531464d70b917d3d7449d"></script>
+  <link rel="icon" href="/logo.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="keywords" content="前端博客,开发经验,前端进阶,源码分析,读书笔记,JohnieXu">
+  <meta name="theme-color" content="#FAD95C">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#FAD95C">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="google-site-verification" content="VJDAfmKkQi_fst1HyzcNY4ifwP5w7EhLCXjjO8qgXqM">
+  <meta name="baidu-site-verification" content="8xYgZOGSrO">
+    
+    <link rel="preload" href="/assets/css/0.styles.d1382f8f.css" as="style"><link rel="preload" href="/assets/js/app.3bcf3a0e.js" as="script"><link rel="preload" href="/assets/js/2.b4f27ee0.js" as="script"><link rel="preload" href="/assets/js/22.8c337403.js" as="script"><link rel="preload" href="/assets/js/6.05bc6ce8.js" as="script"><link rel="prefetch" href="/assets/js/10.3da5aef3.js"><link rel="prefetch" href="/assets/js/11.f2e6ab3f.js"><link rel="prefetch" href="/assets/js/12.20216ed4.js"><link rel="prefetch" href="/assets/js/13.5b9c8852.js"><link rel="prefetch" href="/assets/js/14.398c18fd.js"><link rel="prefetch" href="/assets/js/15.2e75b8fd.js"><link rel="prefetch" href="/assets/js/16.d88b187f.js"><link rel="prefetch" href="/assets/js/17.c1784bdb.js"><link rel="prefetch" href="/assets/js/18.5360b253.js"><link rel="prefetch" href="/assets/js/19.cf190076.js"><link rel="prefetch" href="/assets/js/20.3a6552da.js"><link rel="prefetch" href="/assets/js/21.cf35786e.js"><link rel="prefetch" href="/assets/js/23.ee15a9cc.js"><link rel="prefetch" href="/assets/js/24.1d4ab9ef.js"><link rel="prefetch" href="/assets/js/25.c07d02f6.js"><link rel="prefetch" href="/assets/js/26.99e7dce1.js"><link rel="prefetch" href="/assets/js/27.3c801e2d.js"><link rel="prefetch" href="/assets/js/28.0446f55d.js"><link rel="prefetch" href="/assets/js/29.5cfc1132.js"><link rel="prefetch" href="/assets/js/3.85e1272e.js"><link rel="prefetch" href="/assets/js/30.53607ab2.js"><link rel="prefetch" href="/assets/js/31.351776dc.js"><link rel="prefetch" href="/assets/js/32.cadfb0a3.js"><link rel="prefetch" href="/assets/js/33.7d139a39.js"><link rel="prefetch" href="/assets/js/34.43f5bdfd.js"><link rel="prefetch" href="/assets/js/35.c284c13d.js"><link rel="prefetch" href="/assets/js/36.bc5d04e9.js"><link rel="prefetch" href="/assets/js/37.cdfb47c4.js"><link rel="prefetch" href="/assets/js/38.bf8fad27.js"><link rel="prefetch" href="/assets/js/4.5dfe9687.js"><link rel="prefetch" href="/assets/js/5.14bdf9a3.js"><link rel="prefetch" href="/assets/js/7.c372ee39.js"><link rel="prefetch" href="/assets/js/8.89c10d85.js"><link rel="prefetch" href="/assets/js/9.5d8edd10.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d1382f8f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">迪诺笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文章专栏" class="dropdown-title"><span class="title">文章专栏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/articles/FE/" class="nav-link router-link-active">
+  硬核前端
+</a></li><li class="dropdown-item"><!----> <a href="/articles/GO/" class="nav-link">
+  GO笔记
+</a></li><li class="dropdown-item"><!----> <a href="/articles/UI/" class="nav-link">
+  UI设计
+</a></li></ul></div></div><div class="nav-item"><a href="/articles/PRACTICE/" class="nav-link">
+  实战分享
+</a></div><div class="nav-item"><a href="https://www.yuque.com/johniexu" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  语雀
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://juejin.im/user/59eb44426fb9a045000230b8" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/JohnieXu/xx-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文章专栏" class="dropdown-title"><span class="title">文章专栏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/articles/FE/" class="nav-link router-link-active">
+  硬核前端
+</a></li><li class="dropdown-item"><!----> <a href="/articles/GO/" class="nav-link">
+  GO笔记
+</a></li><li class="dropdown-item"><!----> <a href="/articles/UI/" class="nav-link">
+  UI设计
+</a></li></ul></div></div><div class="nav-item"><a href="/articles/PRACTICE/" class="nav-link">
+  实战分享
+</a></div><div class="nav-item"><a href="https://www.yuque.com/johniexu" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  语雀
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://juejin.im/user/59eb44426fb9a045000230b8" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/JohnieXu/xx-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/articles/FE/regular-directives-of-Git.html" class="sidebar-link">Git常用命令整理</a></li><li><a href="/articles/FE/FE-file-upload.html" class="sidebar-link">前端文件上传总结</a></li><li><a href="/articles/FE/deep-understanding-of-JS-module.html" class="sidebar-link">深入理解JS模块</a></li><li><a href="/articles/FE/prototype-of-JS.html" class="sidebar-link">JS原型链</a></li><li><a href="/articles/FE/deep-understanding-of-es6-module.html" class="active sidebar-link">ES6模块的核心知识点</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/articles/FE/deep-understanding-of-es6-module.html#es6模块与前es6模块概念区别" class="sidebar-link">ES6模块与前ES6模块概念区别</a></li><li class="sidebar-sub-header"><a href="/articles/FE/deep-understanding-of-es6-module.html#export-模块导出" class="sidebar-link">export 模块导出</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/articles/FE/deep-understanding-of-es6-module.html#命名导出" class="sidebar-link">命名导出</a></li><li class="sidebar-sub-header"><a href="/articles/FE/deep-understanding-of-es6-module.html#默认导出" class="sidebar-link">默认导出</a></li></ul></li><li class="sidebar-sub-header"><a href="/articles/FE/deep-understanding-of-es6-module.html#import-模块导入" class="sidebar-link">import 模块导入</a></li></ul></li><li><a href="/articles/FE/key-concepts-of-react-and-dva.html" class="sidebar-link">Ract和Dva的一些核心概念</a></li><li><a href="/articles/FE/video.js-in-react.html" class="sidebar-link">React中使用Video.js</a></li><li><a href="/articles/FE/react-quill-in-react.html" class="sidebar-link">React中使用Quill.js</a></li><li><a href="/articles/FE/react-component-encapsulation.html" class="sidebar-link">React封装通用组件</a></li><li><a href="/articles/FE/frontend-interview.html" class="sidebar-link">frontend-interview</a></li><li><a href="/articles/FE/Talk-about-the-pit-encountered-in-the-implementation-of-Vue-routing-component-cache.html" class="sidebar-link">聊一聊实现Vue路由组件缓存遇到的’坑‘</a></li><li><a href="/articles/FE/Take-you-to-analyze-the-source-code-of-Vue-router.html" class="sidebar-link">带你全面分析vue-router源码（万字长文）</a></li><li><a href="/articles/FE/Thoroughly-understand-DOM-event-mechanism.html" class="sidebar-link">这次一定彻底弄懂DOM事件机制</a></li><li><a href="/articles/FE/A-comprehensive-analysis-and-summary-of-BFC-principle-and-Practice.html" class="sidebar-link">全面分析总结BFC原理及实践</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="es6模块与前es6模块概念区别"><a href="#es6模块与前es6模块概念区别" class="header-anchor">#</a> ES6模块与前ES6模块概念区别</h2> <ul><li><p>ES6基于文件的模块</p> <p>即一个文件一个模块，在浏览器 web 环境中需要分别加载各个单独的文件模块，而非将其放入一个大的单独文件加载，当然现阶段对于ES6的模块都是采用 babel 进行 transpile 然后打包成若干个<a href="http://www.lessing.online/xx-blog/articles/FE/deep-understanding-of-JS-module.html#umd" target="_blank" rel="noopener noreferrer">UMD模块<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。对于考虑是采用单独小文件还是打包后的若干个较大文件，主要是考虑到 HTTP/1.1 高效并发/交替加载多个小文件的性能问题。</p></li></ul> <ul><li><p>ES6模块的 API 是静态的</p> <p>即需要在模块的公开 API 中静态定义所有最高层导出，之后无法再添加
+看下<a href="http://www.lessing.online/xx-blog/articles/FE/deep-understanding-of-JS-module.html#%E5%BC%95%E8%A8%80" target="_blank" rel="noopener noreferrer">深入理解 JS 模块<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>中的一个ES6模块的例子</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//模块定义 myModule.js</span>
+<span class="token keyword">const</span> name <span class="token operator">=</span> <span class="token string">'Byron'</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">printName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">printFullName</span><span class="token punctuation">(</span><span class="token parameter">firstName</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>firstName <span class="token operator">+</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> myModule <span class="token operator">=</span> <span class="token punctuation">{</span>
+    printName<span class="token operator">:</span> printName<span class="token punctuation">,</span>
+    printFullName<span class="token operator">:</span> printFullName
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> myModule<span class="token punctuation">;</span>
+</code></pre></div><p>上例中导出了 myModule，是一个对象。这里说的 API 是静态的指的是对于上面的模块来说导出的只有 myModule，没有其他的了，但是是可以修改/添加/删除导出的 myModule 对象的属性来间接修改模块导出的 API 的。</p></li> <li><p>ES6模块是单例</p> <p>即ES6模块只有一个单一实例，多个模块中引用同一个的同一个模块，最终都指向对那个唯一的中心实例的引用。</p></li> <li><p>模块暴露的属性和方法不是值的传递而是类似指针的绑定</p></li> <li><p>导入模块和从网络请求加载模块完全一样</p> <p>浏览器/Node.js 提供了各自环境下默认的模块加载器(Module Loader)，<code>import ... from 'xxx</code>语句对于模块加载器来说就是<strong>告诉模块加载器去哪个 URL/文件路径下获取对应的模块</strong></p></li></ul> <h2 id="export-模块导出"><a href="#export-模块导出" class="header-anchor">#</a> export 模块导出</h2> <h3 id="命名导出"><a href="#命名导出" class="header-anchor">#</a> 命名导出</h3> <ul><li><p>模块内部没有全局作用域，以下例子中的 var 定义的作用域仅在本模块，模块内可以访问和使用全局 global/window 等，但不建议这么用。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> awesome <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> bar <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> foo<span class="token punctuation">,</span> awesome<span class="token punctuation">,</span> bar <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></li></ul> <h3 id="默认导出"><a href="#默认导出" class="header-anchor">#</a> 默认导出</h3> <p><code>export</code> 导出是对变量的绑定(指针)，<code>export default</code> 导出是对值的绑定，<code>export { a as default }</code>导出是对变量的绑定(指针)</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 模块1</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> foo<span class="token punctuation">;</span><span class="token comment">// 这里默认导出是对foo值的绑定，若后续对foo有更改默认导出值不会相应更改</span>
+
+<span class="token comment">// 模块2</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> foo <span class="token keyword">as</span> <span class="token keyword">default</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment">// 这里默认导出是对变量foo的绑定(类似指针的绑定)，若后续对foo有更改相应的默认导出也会更改</span>
+</code></pre></div><h2 id="import-模块导入"><a href="#import-模块导入" class="header-anchor">#</a> import 模块导入</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 模块1</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">awesome</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 模块2</span>
+<span class="token keyword">import</span> foo<span class="token punctuation">,</span> <span class="token punctuation">{</span> awesome <span class="token keyword">as</span> Awesome <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token operator">*</span> <span class="token keyword">as</span> Bar <span class="token keyword">from</span> <span class="token string">'path/to/module'</span><span class="token punctuation">;</span>
+</code></pre></div><p>以上的 foo 是默认导入，Awesome 为别名导入，Bar 为命名空间导入(讲所有导出导入到 Bar 的命名空间下),注意<strong>所有导入的绑定都是不可变的/或只读的</strong>，同时<strong>import 的声明是提升的，不同于 require 的动态加载</strong>。</p> <p>关于<strong>ES6模块动态导入</strong>/<strong>模块循环依赖</strong>以及<strong>ES6模块的原理</strong>可以阅读我写的另一篇文章——<a href="https://www.yuque.com/docs/share/ad354374-4122-4599-973b-aa63943c3b3d" target="_blank" rel="noopener noreferrer">详解ES模块系统<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/JohnieXu/xx-blog/edit/master/docs/articles/FE/deep-understanding-of-es6-module.md" target="_blank" rel="noopener noreferrer">发现问题？</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">3/7/2020, 1:31:08 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/articles/FE/prototype-of-JS.html" class="prev">
+        JS原型链
+      </a></span> <span class="next"><a href="/articles/FE/key-concepts-of-react-and-dva.html">
+        Ract和Dva的一些核心概念
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.3bcf3a0e.js" defer></script><script src="/assets/js/2.b4f27ee0.js" defer></script><script src="/assets/js/22.8c337403.js" defer></script><script src="/assets/js/6.05bc6ce8.js" defer></script>
+  </body>
+</html>
