@@ -1,5 +1,4 @@
 ---
-
 title: 关于我
 
 meta:
@@ -7,7 +6,6 @@ meta:
     content: 关于我
   - name: keywords
     content: 关于我
-
 ---
 
 ---

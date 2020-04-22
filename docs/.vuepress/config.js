@@ -161,11 +161,32 @@ module.exports = {
         name: '博客',
         lists: [
           {
-            title: '凉风有信',
-            subtitle: '责难无以成事',
-            link: 'https://blog.cnguu.cn/',
-            logo: 'https://static.xmt.cn/cc50c217cbe342ce951324583f2c6139.png',
-            color: '#9a69ec'
+            title: '网易云前端专栏',
+            subtitle: '',
+            link: 'https://musicfe.dev/',
+            logo: 'https://musicfe.dev/icons/icon-192x192.png',
+            color: '#dd001b'
+          },
+          {
+            title: '转转前端',
+            link: 'http://zzfed.com/',
+            subtitle: '大转转 FE',
+            logo: 'http://zzfed.com/favicon.ico',
+            color: '#ec5348'
+          },
+          {
+            title: '蚊子',
+            subtitle: '蚊子、wenzi',
+            link: 'https://www.xiabingbao.com/',
+            logo: 'https://www.xiabingbao.com/favicon.ico',
+            color: '#4D444F'
+          },
+          {
+            title: 'ConardLi的blog',
+            subtitle: '',
+            link: 'http://www.conardli.top/blog/',
+            logo: '',
+            color: '#3eaf7c'
           }
         ]
       }

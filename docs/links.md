@@ -15,13 +15,13 @@ meta:
 ## 留言格式
 
 ::: primaryLong
-站点名称：凉风有信
+站点名称：迪诺笔记
 
-站点描述：责难无以成事
+站点描述：哪里会有人喜欢孤独，不过是不喜欢失望罢了。 ——村上春树
 
-站点网址：https://blog.cnguu.cn/
+站点网址：https://blog.lessing.online/
 
-LOGO：https://static.xmt.cn/cc50c217cbe342ce951324583f2c6139.png
+LOGO：https://blog.lessing.online/logo.png
 
 主题色调: #9a69ec
 :::
