@@ -373,16 +373,16 @@ module.exports = {
         ga: "G-1HXVHRSBB0"
       }
     ],
-    // [
-    //   "@vuepress/pwa",
-    //   {
-    //     serviceWorker: true,
-    //     updatePopup: {
-    //       message: "Get到了一波新技能",
-    //       buttonText: "更新"
-    //     }
-    //   }
-    // ],
+    [
+      "@vuepress/pwa",
+      {
+        serviceWorker: true,
+        updatePopup: {
+          message: "Get到了一波新技能",
+          buttonText: "更新"
+        }
+      }
+    ],
     [
       "sitemap",
       {
