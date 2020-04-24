@@ -192,7 +192,7 @@ module.exports = {
       }
     ],
     buttons: [
-      {text: '阅读列表', link: '/program/', type: 'primary'},
+      {text: '文章专栏', link: '/program/', type: 'primary'},
       {text: '关于作者', link: '/about.html', type: 'default'}
     ],
     navs: [
@@ -205,17 +205,17 @@ module.exports = {
         link: "/program/"
       },
     ],
-    ityped: {
-      typeSpeed: 150,
-      backSpeed: 100,
-      startDelay: 300,
-      backDelay: 1300,
-      loop: true,
-      showCursor: true,
-      placeholder: false,
-      disableBackTyping: false,
-      cursorChar: '丨'
-    },
+    // ityped: {
+    //   typeSpeed: 150,
+    //   backSpeed: 100,
+    //   startDelay: 300,
+    //   backDelay: 1300,
+    //   loop: true,
+    //   showCursor: true,
+    //   placeholder: false,
+    //   disableBackTyping: false,
+    //   cursorChar: '丨'
+    // },
     nameplate: {
       title: "JohnieXu", // 内容
       width: '80px', // 宽度
