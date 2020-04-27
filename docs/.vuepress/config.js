@@ -187,6 +187,13 @@ module.exports = {
             link: 'http://www.conardli.top/blog/',
             logo: '',
             color: '#3eaf7c'
+          },
+          {
+            title: 'Shymean',
+            subtitle: '世人的悲欢并不相通，我只是觉得他们吵闹。',
+            link: 'https://www.shymean.com/',
+            logo: 'https://www.shymean.com/favicon.ico',
+            color: ''
           }
         ]
       }
