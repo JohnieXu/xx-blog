@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "clean": "rm -rf articles assets docs go practice program static && cp -r dist/* . && rm -rf dist"
+    "clean": "rm -rf articles assets docs go practice program static && cp -r dist/* . && rm -rf dist",
+    "deploy": "git push coding coding-pages && git push gitee coding-pages"
   },
   "keywords": [
     "blog",
