@@ -27,27 +27,27 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "fec5be5dd70109b8b3ed13ec567e5815"
+    "revision": "4ead9b81ed24c3db95f3eb1a8234011a"
   },
   {
     "url": "articles/BE/index.html",
-    "revision": "eabf3952380bccbea0a2ea22acf74d5a"
+    "revision": "04bdcadeafc07bcc7d8ea0ac4d1e31b0"
   },
   {
     "url": "articles/BE/web-service-deployment.html",
-    "revision": "8a12fd9ad677e0db2de48b85ef35f757"
+    "revision": "be287722d6d30a03990aeaf6d75a7e18"
   },
   {
     "url": "articles/index.html",
-    "revision": "005f08664191051d614467456a70e765"
+    "revision": "a4a055938fd6ba747c4ee7f7f21d1abf"
   },
   {
     "url": "articles/UI/index.html",
-    "revision": "b866735e0627f932da0f64baffb94615"
+    "revision": "311005ab3bcfac12498b3afcf4ccaad1"
   },
   {
     "url": "articles/UI/miniprogram-design-pattern.html",
-    "revision": "634fa98b4423aee4d773ccc745eeeaf2"
+    "revision": "f4397421ab87cca8a86e396d6a57acf8"
   },
   {
     "url": "assets/css/0.styles.4ac54596.css",
@@ -711,11 +711,11 @@ self.__precacheManifest = [
   },
   {
     "url": "go/GO笔记-错误捕获.html",
-    "revision": "5850b5ed52ac160bdf5a875bdce4d5c4"
+    "revision": "fdbfeaf1f9145ff87da30be35f244970"
   },
   {
     "url": "go/index.html",
-    "revision": "f0043d9decee332e859fcab7f4e33093"
+    "revision": "080b221264bc72a33849e6f2a07d3732"
   },
   {
     "url": "home-bg.jpg",
@@ -735,11 +735,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "cc0f5437e5d01f08b50e5210081c0e7a"
+    "revision": "dba52bbfcbc57c63b3754a2320a5025b"
   },
   {
     "url": "links.html",
-    "revision": "bc23a227b8b664962ecc114a5c94c697"
+    "revision": "500ab15b6b1abb998fc35c63f63c4871"
   },
   {
     "url": "logo_144.png",
@@ -771,79 +771,79 @@ self.__precacheManifest = [
   },
   {
     "url": "practice/index.html",
-    "revision": "92605f06854103a43c0a6abcc591a865"
+    "revision": "6a71eca010ccf295596482f526c168e2"
   },
   {
     "url": "practice/Vuepress-builds-PWA-blog.html",
-    "revision": "271d6923bb9d0ac275c7bf56f4ab2a01"
+    "revision": "f782f4698d75fd7df3d10e9f8baa2cc7"
   },
   {
     "url": "program/A-comprehensive-analysis-and-summary-of-BFC-principle-and-Practice.html",
-    "revision": "ad73fd02521173c4d1286756598ba9ee"
+    "revision": "5962877825c30292c773e98bab0571d6"
   },
   {
     "url": "program/deep-understanding-of-es6-module.html",
-    "revision": "e6ec7f67a2a9e2778e9c3f481c4260c7"
+    "revision": "4c363ee0770777f2eae5703365e0cd04"
   },
   {
     "url": "program/deep-understanding-of-JS-module.html",
-    "revision": "bd391dfa307e43a35750e1928d06d734"
+    "revision": "f12c5a463892a1931839c6c70804e885"
   },
   {
     "url": "program/deep-understanding-of-JS-prototype-and-inheritance.html",
-    "revision": "99225881976123de20a5ab042b04634d"
+    "revision": "b466ff6b7b50799685ddaeef7fe9eb14"
   },
   {
     "url": "program/FE-file-upload.html",
-    "revision": "a7a928acba0a6cb53815249144f99ac1"
+    "revision": "c2d63353f208e9b49a248cccf47a94d5"
   },
   {
     "url": "program/frontend-interview.html",
-    "revision": "abea0b61a32f6ee81f5ab19a3cbd7b33"
+    "revision": "1ca8ae7bcdcbf257681f3d884468f4f0"
   },
   {
     "url": "program/key-concepts-of-react-and-dva.html",
-    "revision": "726e8e7b028009aeea8fc5eddf580771"
+    "revision": "03800bb948cab0fec8bc9e01ab4e9639"
   },
   {
     "url": "program/lazyload-pullup-load.html",
-    "revision": "ab1a3dc252e53992a149201e272bc966"
+    "revision": "8e72594531066d1eacd70283ef8d6550"
   },
   {
     "url": "program/prototype-of-JS.html",
-    "revision": "cddd00f5b1aeb72406d9b73a1a12ab68"
+    "revision": "bd9b2ac096c103e1dc49758a068e3a36"
   },
   {
     "url": "program/react-component-encapsulation.html",
-    "revision": "573127048954939486ea4243fb9e1382"
+    "revision": "6651f791d181b04521aab70dc5483f46"
   },
   {
     "url": "program/react-quill-in-react.html",
-    "revision": "78b15ccf3cc008a0057b9c9347693b62"
+    "revision": "295141829413e691856f45815573eda1"
   },
   {
     "url": "program/regular-directives-of-Git.html",
-    "revision": "fb301c5e0ea292683c555074db4f9ac9"
+    "revision": "512cb0cc551534a5f22dd8e861e5f8ee"
   },
   {
     "url": "program/Take-you-to-analyze-the-source-code-of-Vue-router.html",
-    "revision": "bf232cff525483e38f44f2a598a4f356"
+    "revision": "414c7092ad77746688ec028a84069266"
   },
   {
     "url": "program/Talk-about-the-pit-encountered-in-the-implementation-of-Vue-routing-component-cache.html",
-    "revision": "495f2fd6528c7ccf0844c417908d5821"
+    "revision": "33108c8efa023140bfa8c9bc10f282b4"
   },
   {
     "url": "program/Thoroughly-understand-DOM-event-mechanism.html",
-    "revision": "620789c07563d9f0ea916041735f2cdd"
+    "revision": "fada8bdb285e437c122b2cf704f61620"
   },
   {
     "url": "program/video.js-in-react.html",
-    "revision": "1ab30efd6641efdd557d2643b85e6c8e"
+    "revision": "ec00a9367a00b0631490bf296d047e5b"
   },
   {
     "url": "timeline.html",
-    "revision": "f47ee8ca6452c693d7cd38b8c394291f"
+    "revision": "4807338f3b0b16480fdd0260acf3b03e"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
