@@ -1,6 +1,6 @@
 # 迪诺笔记——JohnieXu's Blog
 
-![](https://img.shields.io/travis/JohnieXu/xx-blog?style=for-the-badge)
+![](https://img.shields.io/travis/com/JohnieXu/xx-blog?style=for-the-badge)
 ![](https://img.shields.io/github/license/JohnieXu/xx-blog?style=for-the-badge)
 ![](https://img.shields.io/github/last-commit/JohnieXu/xx-blog?style=for-the-badge)
 
