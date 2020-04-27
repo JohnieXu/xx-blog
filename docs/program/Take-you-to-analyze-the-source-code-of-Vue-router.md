@@ -1,6 +1,7 @@
 ---
 title: 带你全面分析vue-router源码（万字长文）
-date: 2020-2-13
+created: 2020-02-13
+updated: 2020-02-13
 categories:
   - 文章专栏
   - 硬核前端

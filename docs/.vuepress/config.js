@@ -16,6 +16,7 @@ module.exports = {
   base: PUBLISH_PATH,
   dest: "dist",
   // theme: "reco",
+  theme: "yur",
   themeConfig: {
     type: "blog",
     nav: [
@@ -109,6 +110,200 @@ module.exports = {
     editLinkText: "发现问题？",
     lastUpdated: "更新于"
   },
+  themeConfig: {
+    lang: 'zh-CN',
+    logo: '/logo.png',
+    author: 'JohnieXu',
+    authorLink: 'https://github.com/JohnieXu/',
+    dark: true,
+    timeline: true,
+    about: true,
+    avatar: '/avatar.jpeg',
+    // banner: '/home-bg3.jpg',
+    discuss: 'valine',
+    valine: {
+      // https://leancloud.cn/dashboard/app.html?appid=dVMwFciWpUqAb2YNjKM3VrsG-gzGzoHsz#/key
+      appId: "dVMwFciWpUqAb2YNjKM3VrsG-gzGzoHsz",
+      appKey: "wWlELg748e880pUK0rGngtha",
+      placeholder: '在这里写下你的留言丨支持 MarkDown 语法',
+      notify: false,
+      verify: true,
+      avatar: 'mp',
+      pageSize: 8,
+      recordIP: true,
+      lang: 'zh-cn'
+    },
+    curtain: {
+      tip: '页面准备中...',
+      textShadow: '#e91e63'
+    },
+    locales: {
+      title: "迪诺笔记",
+      description: "哪里会有人喜欢孤独，不过是不喜欢失望罢了。    ——村上春树",
+      backToHome: "回到主页",
+      archives: "归档",
+      links: "友人帐",
+      about: "关于我",
+      About: "关于作者",
+      Read: "阅读",
+    },
+    post: {
+      cover: [],
+      bubbles: {
+        color: 'random',
+        radius: 15,
+        density: 0.3,
+        clearOffset: 0.2
+      }
+    },
+    links: [
+      {
+        name: '博客',
+        lists: [
+          {
+            title: '网易云前端专栏',
+            subtitle: '',
+            link: 'https://musicfe.dev/',
+            logo: 'https://musicfe.dev/icons/icon-192x192.png',
+            color: '#dd001b'
+          },
+          {
+            title: '转转前端',
+            link: 'http://zzfed.com/',
+            subtitle: '大转转 FE',
+            logo: 'http://zzfed.com/favicon.ico',
+            color: '#ec5348'
+          },
+          {
+            title: '蚊子',
+            subtitle: '蚊子、wenzi',
+            link: 'https://www.xiabingbao.com/',
+            logo: 'https://www.xiabingbao.com/favicon.ico',
+            color: '#4D444F'
+          },
+          {
+            title: 'ConardLi的blog',
+            subtitle: '',
+            link: 'http://www.conardli.top/blog/',
+            logo: '',
+            color: '#3eaf7c'
+          }
+        ]
+      }
+    ],
+    buttons: [
+      {text: '文章专栏', link: '/program/', type: 'primary'},
+      {text: '关于作者', link: '/about.html', type: 'default'}
+    ],
+    navs: [
+      {
+        text: "首页",
+        link: "/"
+      },
+      {
+        text: "文章专栏",
+        link: "/program/"
+      },
+    ],
+    // ityped: {
+    //   typeSpeed: 150,
+    //   backSpeed: 100,
+    //   startDelay: 300,
+    //   backDelay: 1300,
+    //   loop: true,
+    //   showCursor: true,
+    //   placeholder: false,
+    //   disableBackTyping: false,
+    //   cursorChar: '丨'
+    // },
+    nameplate: {
+      title: "JohnieXu", // 内容
+      width: '80px', // 宽度
+      height: '32px', // 高度
+      text: [
+        {
+            fontSize: '20',
+            textAnchor: 'middle',
+            x: '50%',
+            y: '50%',
+            textTransform: 'uppercase',
+            fill: 'none',
+            stroke: '#3498db',
+            textShadow: '0 0 1px #3498db',
+            strokeWidth: '1px',
+            strokeDasharray: '90 310',
+            animate: {
+                attributeName: 'stroke-dashoffset',
+                begin: '-1.5s',
+                dur: '6s',
+                from: '0',
+                to: '-400',
+                repeatCount: 'indefinite'
+            }
+        },
+        {
+            fontSize: '20',
+            textAnchor: 'middle',
+            x: '50%',
+            y: '50%',
+            textTransform: 'uppercase',
+            fill: 'none',
+            stroke: '#f39c12',
+            textShadow: '0 0 1px #f39c12',
+            strokeWidth: '1px',
+            strokeDasharray: '90 310',
+            animate: {
+                attributeName: 'stroke-dashoffset',
+                begin: '-3s',
+                dur: '6s',
+                from: '0',
+                to: '-400',
+                repeatCount: 'indefinite'
+            }
+        },
+        {
+            fontSize: '20',
+            textAnchor: 'middle',
+            x: '50%',
+            y: '50%',
+            textTransform: 'uppercase',
+            fill: 'none',
+            stroke: '#e74c3c',
+            textShadow: '0 0 1px #e74c3c',
+            strokeWidth: '1px',
+            strokeDasharray: '90 310',
+            animate: {
+                attributeName: 'stroke-dashoffset',
+                begin: '-4.5s',
+                dur: '6s',
+                from: '0',
+                to: '-400',
+                repeatCount: 'indefinite'
+            }
+        },
+        {
+            fontSize: '20',
+            textAnchor: 'middle',
+            x: '50%',
+            y: '50%',
+            textTransform: 'uppercase',
+            fill: 'none',
+            stroke: '#9b59b6',
+            textShadow: '0 0 1px #9b59b6',
+            strokeWidth: '1px',
+            strokeDasharray: '90 310',
+            animate: {
+                attributeName: 'stroke-dashoffset',
+                begin: '-6s',
+                dur: '6s',
+                from: '0',
+                to: '-400',
+                repeatCount: 'indefinite'
+            }
+        }
+      ]
+    }
+  },
   configureWebpack: {
     resolve: {
       alias: {
@@ -139,13 +334,13 @@ module.exports = {
     ],
     [
       "link",
-      { rel: "apple-touch-icon", href: "/icons/apple-touch-icon-152x152.png" }
+      { rel: "apple-touch-icon", href: "/logo.png" }
     ],
     [
       "link",
       {
         rel: "mask-icon",
-        href: "/icons/safari-pinned-tab.svg",
+        href: "/logo.png",
         color: "#FAD95C"
       }
     ],
@@ -153,7 +348,7 @@ module.exports = {
       "meta",
       {
         name: "msapplication-TileImage",
-        content: "/icons/msapplication-icon-144x144.png"
+        content: "/logo.png"
       }
     ],
     ["meta", { name: "msapplication-TileColor", content: "#000000" }],

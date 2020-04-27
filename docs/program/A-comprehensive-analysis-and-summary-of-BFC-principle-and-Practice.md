@@ -1,6 +1,7 @@
 ---
 title: 全面分析总结BFC原理及实践
-date: 2020-3-2
+created: 2020/03/02
+updated: 2020/03/02
 categories:
   - 文章专栏
   - 硬核前端

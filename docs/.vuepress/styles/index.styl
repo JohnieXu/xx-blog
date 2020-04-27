@@ -36,3 +36,12 @@ a.sidebar-link {
 .custom-block.danger .custom-block-title {
   color: darken(#cc000094, 20%)!important;
 }
+
+#posts .post-list .ant-row > div .ant-list-item {
+  display: flex;
+}
+@media screen and (max-width: 480px) {
+  #posts .post-list .ant-row>div .ant-list-item .ant-list-item-extra {
+    margin: auto!important;
+  }
+}

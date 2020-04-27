@@ -1,12 +1,13 @@
 ---
-  title: 这次一定彻底弄懂DOM事件机制
-  date: 2020-2-26
-  categories:
-    - 文章专栏
-    - 硬核前端
-  tags:
-    - 前端核心
-    - 前端进阶
+title: 这次一定彻底弄懂DOM事件机制
+created: 2020-02-26
+updated: 2020-02-26
+categories:
+  - 文章专栏
+  - 硬核前端
+tags:
+  - 前端核心
+  - 前端进阶
 ---
 
 ## 前言

@@ -1,5 +1,7 @@
 ---
 title: JS原型链
+created: 2019/11/06
+updated: 2019/11/06
 categories:
   - 硬核前端
 tags:
