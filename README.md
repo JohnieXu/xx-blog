@@ -1,5 +1,9 @@
 # 迪诺笔记——JohnieXu's Blog
 
+![](https://img.shields.io/travis/JohnieXu/xx-blog?style=for-the-badge)
+![](https://img.shields.io/npm/l/xx-blog?style=for-the-badge)
+![](https://img.shields.io/github/last-commit/JohnieXu/xx-blog?style=for-the-badge)
+
 > 我的个人博客
 > 
 > 项目地址：https://blog.lessing.online/
