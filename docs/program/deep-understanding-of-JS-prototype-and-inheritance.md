@@ -1,7 +1,7 @@
 ---
 title: 深入理解JS原型与继承
-created: 2020/04/26
-updated: 2019/04/26
+created: 2020/05/03
+updated: 2020/05/03
 categories:
   - 文章专栏
   - 硬核前端
