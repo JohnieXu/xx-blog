@@ -361,6 +361,7 @@ git commit -am update // commit
 ```
 
 ### 合并其他分支的文件
+
 **适用场景**: 在一个项目的多个分支中同时有个多个feature等分支，想把某一个分支的部分文件的修改合并到另一个分支上
 
 ```bash
@@ -373,6 +374,7 @@ git checkout --patch [branch_name] [target_file_path] // 接下来根据提示�
 - `target_file_path`：需要合并的文件的地址
 
 ### 切换到远程特定分支
+
 **适用场景**: 
 1. 在进行项目克隆时使用常规的`git clone ....`命令克隆的完整的项目，是包含所有的分支和标签的，但是用`git branch`查看只会看到master分支；
 2. 另一种情况是在克隆项目为了减小克隆文件大小，采用`git clone --depth=1 ...`只克隆`master`分支上最近一次`commit`，这时候项目只有`master`分支；
@@ -400,7 +402,9 @@ git fetch --depth=1 origin 3.x-stable // 拉取上一步自行关联的3.x-stabl
 > 拉取ant-design3.x-stable分支
 
 ### 更新克隆不完整的仓库
+
 **使用场景**
+
 在[上一步](#切换到远程特定分支)中克隆远程仓库时使用了`--depth=1`等命令，导致本地仓库不是完整的git仓库，后续希望看到完整的commit提交记录
 
 ```bash
@@ -412,6 +416,40 @@ git fetch --unshallow // 使用--unshallow属性来合并到完整的git仓库
 ![使用git fetch --unshallow拉取完整的vue-router项目](https://tva1.sinaimg.cn/large/00831rSTgy1gdn9ga0aetj317r0u040w.jpg)
 
 > 使用`git fetch --unshallow`拉取完整的vue-router项目，后续的以及之前的commit记录都可以看到
+
+### 创建git离线包bundle
+
+**使用场景**
+
+可以将本地仓库打包成一个 bundle发送给没有远程仓库权限或远程仓库暂时无法使用的的协作者。
+
+详见：[Git 工具 - 打包](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E6%89%93%E5%8C%85)
+
+```bash
+git bundle create develop.bundle HEAD develop // 将 develop 分支记录打包为 develop.bundle 压缩包
+```
+
+需要包含 HEAD 指向，下面根据根据这个 HEAD 指向来直接克隆生成项目。
+
+```bash
+git bundle clone path/to/develop.bundle demos // 从 develop.bundle 中克隆生成 demos 项目
+```
+
+此时 demos 项目的 origin 将关联到 develop.bundle 文件所在地址
+
+![](~@imgs/d2b99797-4d59-4e23-ba90-38c1a42d3ade.png)
+
+```bash
+git bundle create develop.bundle -20 develop // 将 develop 分支最近的 20 条 commit 记录打包
+```
+
+此时把送给他人并覆盖掉其用于创建 demos 项目的 develop.bundle 文件，然后可以使用`git fetch origin develop` `git pull origin develop`命令来更新项目
+
+```bash
+git bundle verify path/to/develop.bundle // 检查收到的离线包是否有效及是否可以合并到当前项目
+```
+
+> [git bundle 命令文档地址](https://git-scm.com/docs/git-bundle)
 
 ## 四、实际使用流程
 
@@ -510,7 +548,7 @@ git pull origin dev // 将远程仓库dev分支更新拉取到本地并尝试快
 
 ![](~@imgs/e482005b-506e-4b2a-ba92-05fcfaf29c91.png)
 
-点开冲突文件，通过gitlen可以看到冲突情况如下：
+点开冲突文件，通过`gitlen`可以看到冲突情况如下：
 
 ![文件冲突情况](~@imgs/1521f01a-6f01-4d7e-83df-29c9682bcc57.png)
 
