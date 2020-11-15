@@ -211,6 +211,10 @@ module.exports = {
         text: "文章专栏",
         link: "/program/"
       },
+      {
+        text: "个人总结",
+        link: "/summary/"
+      },
     ],
     // ityped: {
     //   typeSpeed: 150,
