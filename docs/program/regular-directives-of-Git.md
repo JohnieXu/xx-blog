@@ -1,7 +1,7 @@
 ---
 title: Git常用命令整理
 created: 2017/03/01
-updated: 2020/02/14
+updated: 2021/01/06
 categories:
   - 工具笔记
   - 前端工具
@@ -38,7 +38,7 @@ git config --list
 ### 配置公钥
 
 ```bash
-ssh-keygen -t rsa -C "281910378@qq.com" // 采用rsa加密算法生成git公钥，前提是用户名和邮箱已经设置好且此处邮箱与前面配置邮箱保持一直
+ssh-keygen -t rsa -C "281910378@qq.com" // 采用rsa加密算法生成git公钥，前提是用户名和邮箱已经设置好且此处邮箱与前面配置邮箱保持一致
 ```
 
 ## 二、常用命令
@@ -190,6 +190,7 @@ git checkout -b bug-101 // 从master分支创建新的对应的bug-101分支
 git add . && git commit -m 'fix bug 101' // 修复bug并提交修改
 git checkout master && git merge --no-ff -m 'merged bug fix 101' bug-101 // 将bug-101分支的修改合并到主分支
 git branch -d bug-101 // 删除bug-101分支
+git checkout dev-xu // 切回之前自己在开发的分支
 git stash pop // 恢复之前工作区以便继续新功能的开发, 同时删除stash记录(git stash list看不到stash的任何内容) <==> git stash apply && git stash drop
 ```
 
@@ -390,7 +391,7 @@ git checkout -b 3.x-table origin/2.x-stable // 拉取远程的3.x-stable分支�
 情况二：
 
 ```bash
-git branch -va // 卡看全部本地和远程分支，发现远程也没有3.x-stalbe分支
+git branch -va // 查看全部本地和远程分支，发现远程也没有3.x-stalbe分支
 git remote set-branches origin "3.x-stable"
 git fetch --depth=1 origin 3.x-stable // 拉取上一步自行关联的3.x-stable分支
 ```
@@ -429,7 +430,7 @@ git fetch --unshallow // 使用--unshallow属性来合并到完整的git仓库
 git bundle create develop.bundle HEAD develop // 将 develop 分支记录打包为 develop.bundle 压缩包
 ```
 
-需要包含 HEAD 指向，下面根据根据这个 HEAD 指向来直接克隆生成项目。
+需要包含 HEAD 指向，下面根据这个 HEAD 指向来直接克隆生成项目。
 
 ```bash
 git bundle clone path/to/develop.bundle demos // 从 develop.bundle 中克隆生成 demos 项目
