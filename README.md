@@ -1,17 +1,19 @@
 # 迪诺笔记——JohnieXu's Blog
 
-![](https://img.shields.io/travis/com/JohnieXu/xx-blog?style=for-the-badge)
-![](https://img.shields.io/github/license/JohnieXu/xx-blog?style=for-the-badge)
-![](https://img.shields.io/github/last-commit/JohnieXu/xx-blog?style=for-the-badge)
+![](https://img.shields.io/travis/com/JohnieXu/xx-blog?style=flat-square)
+![](https://img.shields.io/github/license/JohnieXu/xx-blog?style=flat-square)
+![](https://img.shields.io/github/last-commit/JohnieXu/xx-blog?style=flat-square)
 
 > 我的个人博客
 > 
-> 项目地址：https://blog.lessing.online/
+> 访问地址：https://blog.lessing.online/
 > 
-> 备用地址：https://www.lessing.online/xx-blog/（github-pages）
+> 备用地址1：https://www.lessing.online/xx-blog/（github-pages）
+>
+> 备用地址2：https://xx-blog.vercel.app/（vercel）
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/00831rSTly1gcgunux3fyj31gd0u0aek.jpg" width="600" />
+  <img src="https://p.pstatp.com/origin/pgc-image/e81d9530685a42d28394848a41a83d2d" width="600" />
 </p>
 
 ## 开发部署
