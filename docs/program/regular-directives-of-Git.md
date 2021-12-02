@@ -1,7 +1,7 @@
 ---
 title: Git常用命令整理
 created: 2017/03/01
-updated: 2021/01/06
+updated: 2021/12/02
 categories:
   - 工具笔记
   - 前端工具
@@ -426,11 +426,15 @@ git fetch --unshallow // 使用--unshallow属性来合并到完整的git仓库
 
 详见：[Git 工具 - 打包](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E6%89%93%E5%8C%85)
 
+#### 创建离线包
+
 ```bash
 git bundle create develop.bundle HEAD develop // 将 develop 分支记录打包为 develop.bundle 压缩包
 ```
 
 需要包含 HEAD 指向，下面根据这个 HEAD 指向来直接克隆生成项目。
+
+#### 使用离线包克隆项目
 
 ```bash
 git bundle clone path/to/develop.bundle demos // 从 develop.bundle 中克隆生成 demos 项目
@@ -444,7 +448,14 @@ git bundle clone path/to/develop.bundle demos // 从 develop.bundle 中克隆生
 git bundle create develop.bundle -20 develop // 将 develop 分支最近的 20 条 commit 记录打包
 ```
 
-此时把送给他人并覆盖掉其用于创建 demos 项目的 develop.bundle 文件，然后可以使用`git fetch origin develop` `git pull origin develop`命令来更新项目
+此时把这个新生成的文件发送给他人并覆盖掉其用于创建 demos 项目的 develop.bundle 文件，然后可以使用`git fetch origin develop` `git pull origin develop`命令来更新项目
+
+#### 使用离线包更新仓库
+
+```bash
+git fetch origin develop // 从 origin 关联的 develop.bundle 中更新 git 仓库
+git pull origin develop // 将 git 仓库中的 develop 分支记录更新到工作空间
+```
 
 ```bash
 git bundle verify path/to/develop.bundle // 检查收到的离线包是否有效及是否可以合并到当前项目
