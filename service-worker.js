@@ -27,27 +27,27 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "dd9d1ebc0a73e78c60ef08be7c684a9f"
+    "revision": "c358c0aa154d899ac915270d2c3a5a9a"
   },
   {
     "url": "articles/BE/index.html",
-    "revision": "a60b010d3d8f75f12b866b3b25ac7b2c"
+    "revision": "b92bec82c5de85ccc3fb99efc33f2ec0"
   },
   {
     "url": "articles/BE/web-service-deployment.html",
-    "revision": "5ac4a1f24d47f708712a291d92825f9f"
+    "revision": "be30b18c2a14c48c4792e248e7608b80"
   },
   {
     "url": "articles/index.html",
-    "revision": "978554cc932a98069ea257aa06378eec"
+    "revision": "e30396cc4f58537174b5425b155f645f"
   },
   {
     "url": "articles/UI/index.html",
-    "revision": "6f0c15f87323f25f8dd38e2311fe183c"
+    "revision": "31afac5b8d55c389119c5a2ac0d271a5"
   },
   {
     "url": "articles/UI/miniprogram-design-pattern.html",
-    "revision": "58faf5381285b1d39de354f87385b05d"
+    "revision": "6fe647f4a124caa1a234077f4d4f7e74"
   },
   {
     "url": "assets/css/0.styles.ac505532.css",
@@ -698,8 +698,8 @@ self.__precacheManifest = [
     "revision": "4e0de6b40b2e826f07bbaf4b7e6a6b49"
   },
   {
-    "url": "assets/js/4.ff8cb881.js",
-    "revision": "9af962511a6da3df2002b4faf06eba3a"
+    "url": "assets/js/4.c6111e56.js",
+    "revision": "9842c9af6c7391bd5fa0167b751178f0"
   },
   {
     "url": "assets/js/5.583cd493.js",
@@ -727,11 +727,11 @@ self.__precacheManifest = [
   },
   {
     "url": "go/GO笔记-错误捕获.html",
-    "revision": "9c505f8ba48a94c89ba8599fbda77435"
+    "revision": "d959353e57afff345e32cfed3bb38431"
   },
   {
     "url": "go/index.html",
-    "revision": "6644d9f1bd310e11c35ad61c4ca0f837"
+    "revision": "992aad9a8c516a4bd100d5be80cc5a57"
   },
   {
     "url": "home-bg.jpg",
@@ -751,11 +751,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "fd782e0bfb41fd31dd09116c51ad77a1"
+    "revision": "6432d11d2f2be714f2a70e65dc6b2a56"
   },
   {
     "url": "links.html",
-    "revision": "756be43ee9dcbcdb7ab14c7f16972ec3"
+    "revision": "038060f2841b65c0c0a94ab4f3dfdcc3"
   },
   {
     "url": "logo_144.png",
@@ -787,91 +787,91 @@ self.__precacheManifest = [
   },
   {
     "url": "practice/index.html",
-    "revision": "5eca8c9783633eee42d67d45b121ef55"
+    "revision": "43df9c68c93d9077fa0df9995220425a"
   },
   {
     "url": "practice/Vuepress-builds-PWA-blog.html",
-    "revision": "9e22cd8c63c56925040fda9d1dbcef1a"
+    "revision": "fc782dde185098eec2697145fd79f175"
   },
   {
     "url": "program/A-comprehensive-analysis-and-summary-of-BFC-principle-and-Practice.html",
-    "revision": "621d8c2f04558c6aeb545b5138b67f8c"
+    "revision": "7ddd4e2f839566bf1801a4c62e1cd8b9"
   },
   {
     "url": "program/deep-understanding-of-es6-module.html",
-    "revision": "73d28ad7518b33837756a7891ca404c3"
+    "revision": "3c02f3d7a756a298912d3ed117e44544"
   },
   {
     "url": "program/deep-understanding-of-JS-module.html",
-    "revision": "a0d87e5257d0f296c2a01e4e113f4ccc"
+    "revision": "fe55089cf4f8dcf22c9b9bb7a291ab1d"
   },
   {
     "url": "program/deep-understanding-of-JS-prototype-and-inheritance.html",
-    "revision": "05c44978a394e2c11b57501564625075"
+    "revision": "08ff20f0e4db4cb3217bf55ad18d54e7"
   },
   {
     "url": "program/FE-file-upload.html",
-    "revision": "fb047f3457b9e66090329c80dd9577c5"
+    "revision": "fb67d8307a8b086094206522170aa51a"
   },
   {
     "url": "program/frontend-interview.html",
-    "revision": "627d4d1a87458e1c278f760c2d053a49"
+    "revision": "89ad733e3b306d60abb418dfcacfcf97"
   },
   {
     "url": "program/key-concepts-of-react-and-dva.html",
-    "revision": "7a8bf4231e80d52f53cf6093051d67c0"
+    "revision": "afaa2d24ef24375d05553bb2601ad8dc"
   },
   {
     "url": "program/lazyload-pullup-load.html",
-    "revision": "226eb8a765dc5209c7a39b8552725c77"
+    "revision": "321656ef4981ab5ff0e7be8915545f7c"
   },
   {
     "url": "program/prototype-of-JS.html",
-    "revision": "80c304a0734ef68386f9d9339852ef72"
+    "revision": "b586da11fc858d46fa7540137edb00f8"
   },
   {
     "url": "program/react-component-encapsulation.html",
-    "revision": "eb5ae1b4f56061fe0d9fb44d5e3efdd2"
+    "revision": "002dab7a067df2390acd6f397c9e0b9b"
   },
   {
     "url": "program/react-quill-in-react.html",
-    "revision": "f7b64eb13b1d85155fc3757f71c684cb"
+    "revision": "53c74439cdbfc753d84583bef4e05314"
   },
   {
     "url": "program/regular-directives-of-Git.html",
-    "revision": "496ed18d7e5332899a7aa5bec5930491"
+    "revision": "704d64f68886ebe1b1e1d2ffd5ee03fb"
   },
   {
     "url": "program/Take-you-to-analyze-the-source-code-of-Vue-router.html",
-    "revision": "554b27dc0fe761ae0d999d7805ab9225"
+    "revision": "a0a23a0f3c1c90bcd5edf351df7ca9bf"
   },
   {
     "url": "program/Talk-about-the-pit-encountered-in-the-implementation-of-Vue-routing-component-cache.html",
-    "revision": "b1f162b9cbe3d36ce3b83cc8ea30e1dc"
+    "revision": "64e3221b0274616ed141520876b0d7de"
   },
   {
     "url": "program/Thoroughly-understand-DOM-event-mechanism.html",
-    "revision": "f8773720d78c7ccc9babda6656befabb"
+    "revision": "b416f6259013e3c2494f98bd2d28b879"
   },
   {
     "url": "program/tmp.html",
-    "revision": "3f8e685d0de10bed2bffe8935aa00467"
+    "revision": "5eb310f9450c165d7ff4e971a686cddf"
   },
   {
     "url": "program/video.js-in-react.html",
-    "revision": "b47bf42026812a4e756a2d4f6520f0c5"
+    "revision": "648ce56bdf3dc878de411f618582c9bb"
   },
   {
     "url": "program/Yarn Plug'n Play.html",
-    "revision": "00c958f27a4dd47b1bb02f8982080f10"
+    "revision": "a0877cf8889855fdfcd75848641727d9"
   },
   {
     "url": "summary/2020.11.15.html",
-    "revision": "996a986b696ee810fe69bba1b6a098e4"
+    "revision": "b328765b65810e1c59dfca20a8f60cba"
   },
   {
     "url": "timeline.html",
-    "revision": "898c119be126061c84f3fee8f3eff25c"
+    "revision": "d1713e73c035c29940d0f67ea3db0439"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
