@@ -12,7 +12,7 @@ tags:
 
 ## 前言
 
-今天在看 `ts-loader` 的功能特性时看到其支持 [Yarn Plug'n'Play](https://github.com/TypeStrong/ts-loader#yarn-plugnplay)。 于是花了一些时间了解了一下它的工作原理以及解决的问题并整理除了本篇文章。
+今天在看 `ts-loader` 的功能特性时看到其支持 [Yarn Plug'n'Play](https://github.com/TypeStrong/ts-loader#yarn-plugnplay)。 于是花了一些时间了解了一下它的工作原理以及解决的问题并整理出了本篇文章。
 
 ## 现状与痛点
 
