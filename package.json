@@ -31,6 +31,6 @@
     "vuepress-theme-yur": "^2.2.3"
   },
   "dependencies": {
-    "vuepress-theme-reco": "^1.4.5"
+    "vuepress-theme-reco": "^1.6.14"
   }
 }
