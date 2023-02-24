@@ -28,7 +28,7 @@
     "gh-pages": "^1.1.0",
     "vuepress": "^1.4.1",
     "vuepress-plugin-sitemap": "^2.3.1",
-    "vuepress-theme-yur": "^2.2.3"
+    "vuepress-theme-yur": "^3.1.11"
   },
   "dependencies": {
     "vuepress-theme-reco": "^1.4.5"
