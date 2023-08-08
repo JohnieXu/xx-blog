@@ -8,7 +8,7 @@ const OSS_BASE_PATH = "https://lessing.oss-cn-beijing.aliyuncs.com/blog/";
 const CODING_BASE_PATH = "/";
 const PUBLISH_PATH = "/xx-blog/";
 
-# PUBLISH_PATH = CODING_BASE_PATH; // 默认根路径
+// PUBLISH_PATH = CODING_BASE_PATH; // 默认根路径
 
 module.exports = {
   title: "迪诺笔记",
