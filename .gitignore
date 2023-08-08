@@ -1,6 +1,0 @@
-node_modules/
-yarn-error.log
-dist/
-.DS_Store
-yarn.lock
-oss_upload
