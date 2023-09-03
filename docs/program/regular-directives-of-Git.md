@@ -472,6 +472,22 @@ git log --since="2023-4-23 00:00:00" --until="2023-4-23 23:59:59" --pretty=forma
 ```
 ![按时间范围筛选commit记录](https://cdn.nlark.com/yuque/0/2023/png/298369/1682240459783-598a804f-dad5-4353-af7b-7f843bbc244b.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_22%2Ctext_QEpvaG5pZVh1%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
 
+### 清理忽略但本地存在文件、目录
+
+> 清理 `.gitignore` 标记忽略，但本地存在的文件、目录
+
+**使用场景**
+
+一般前端项目执行构建命令，例如： `npm run build` 会输出 `dist` 等目录，这个目录一般会被 `.gitignore` 标记为忽略，通过下面命令可以快速删除 `dist` 等目录。
+
+```bash
+git clean -X -f [path]
+```
+
+`-X` 用于指定仅删除忽略文件中列出的文件和目录
+`-f` 用于强制执行删除操作
+`[path]` 可选的路径参数，传递时只会清理这个路径下的文件和目录
+
 ## 四、实际使用流程
 
 ### 基本配置
