@@ -2,7 +2,7 @@
 title: 深入理解JS模块
 created: 2018/04/14
 updated: 2019/10/10
-tags:
+tag:
   - 前端进阶
 ---
 

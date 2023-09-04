@@ -79,6 +79,7 @@ export default defineUserConfig({
       blog: true,
     },
     hostname: "johniexu.github.io",
+    hotReload: true,
     // navbar: [
     //   { text: '首页', link: '/', icon: 'creative' },
     //   { text: '文章专栏', link: '/article/', icon: 'creative' },

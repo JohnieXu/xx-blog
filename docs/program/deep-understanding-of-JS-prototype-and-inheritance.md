@@ -2,10 +2,10 @@
 title: 深入理解JS原型与继承
 created: 2020/05/03
 updated: 2020/05/03
-categories:
+category:
   - 文章专栏
   - 硬核前端
-tags:
+tag:
   - 前端核心
   - 前端进阶
 ---

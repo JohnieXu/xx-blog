@@ -1,7 +1,6 @@
 ---
 title: VuePress搭建支持PWA的博客
-date: 2020-3-7
-sidebar: auto
+category: 硬核前端
 ---
 
 ## 配置PWA要点

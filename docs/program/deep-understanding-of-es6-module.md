@@ -2,7 +2,7 @@
 title: ES6模块的核心知识点
 created: 2018/01/02
 updated: 2019/08/21
-tags:
+tag:
   - 前端进阶
 ---
 

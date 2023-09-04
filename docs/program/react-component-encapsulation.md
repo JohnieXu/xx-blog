@@ -2,7 +2,7 @@
 title: React封装通用组件
 created: 2019/06/06
 updated: 2019/06/06
-tags:
+tag:
   - 前端进阶
 ---
 

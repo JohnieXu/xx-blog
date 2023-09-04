@@ -2,19 +2,13 @@
 title: Git常用命令整理
 created: 2017/03/01
 updated: 2021/12/02
-categories:
+category:
   - 工具笔记
   - 前端工具
-tags:
+tag:
   - git
   - 前端工具
 ---
-
-## 全文目录速览
-
-[[toc]]
-
-----
 
 ## 一、配置命令
 

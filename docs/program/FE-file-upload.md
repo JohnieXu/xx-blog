@@ -2,7 +2,7 @@
 title: 前端文件上传总结
 created: 2018/05/20
 updated: 2018/05/20
-tags:
+tag:
   - 前端进阶
 ---
 

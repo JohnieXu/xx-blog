@@ -1,10 +1,8 @@
 ---
 title: 小程序UI设计学习笔记「一」
-date: 2020-3-7
-sidebar: auto
-categories:
+category:
   - UI设计
-tags:
+tag:
   - 学习笔记
 ---
 

@@ -1,10 +1,8 @@
 ---
 title: 【GO学习笔记】错误捕获
-date: 2020-3-13
-sidebar: auto
-categories:
+category:
   - GO
-tags:
+tag:
   - 学习笔记
 ---
 

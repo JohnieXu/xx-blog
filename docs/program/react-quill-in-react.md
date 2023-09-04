@@ -2,7 +2,7 @@
 title: React中使用Quill.js
 created: 2018/10/28
 updated: 2019/10/28
-tags:
+tag:
   - 前端进阶
 ---
 
