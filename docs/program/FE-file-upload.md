@@ -98,7 +98,7 @@ function uploadAndSubmit() {
 
 ## 7.修改后方案
 
-![修改后方案](~@imgs/d73b8d36-4e55-4028-b0e5-b5023d4465a9.png)
+<img src="@imgs/d73b8d36-4e55-4028-b0e5-b5023d4465a9.png">
 
 ## 8.最终完善上传代码
 

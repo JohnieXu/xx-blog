@@ -25,7 +25,7 @@
   "devDependencies": {
     "gh-pages": "^1.1.0",
     "tslib": "^2.6.2",
-    "vuepress": "^1.9.10",
-    "vuepress-theme-hope": "^1.31.0-beta.2"
+    "vuepress": "^2.0.0-beta.67",
+    "vuepress-theme-hope": "^2.0.0-beta.236"
   }
 }

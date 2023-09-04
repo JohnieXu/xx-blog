@@ -1,0 +1,14 @@
+export const data = JSON.parse("{\"key\":\"v-706d7867\",\"path\":\"/program/react-component-encapsulation.html\",\"title\":\"React封装通用组件\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"React封装通用组件\",\"created\":\"2019/06/06\",\"updated\":\"2019/06/06\",\"tag\":[\"前端进阶\"],\"description\":\"封装通用组件 主要思想 封装组件的思想主要是将前端页面/业务逻辑等按模块方式进行抽离，复杂的页面布局/逻辑等放入独立写的模块内部，使用详情组件只需要传入组件定义的数据/方法/chidlren等就可以完成相应功能开发。 封装组件主要分三类： 普通展示型组件(函数式组件) 纯逻型组件(容器组件) 通用业务组件(以基础组件/第三方组件为基础+一定的业务逻辑) 封装普通展示型组件 通过函数式组件实现，比较轻量，不带组件的生命周期，不带内部state，后期也可以通过React Hooks添加内部状态数据的控制\",\"head\":[[\"meta\",{\"property\":\"og:url\",\"content\":\"https://johniexu.github.io/xx-blog/program/react-component-encapsulation.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"迪诺笔记\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"React封装通用组件\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"封装通用组件 主要思想 封装组件的思想主要是将前端页面/业务逻辑等按模块方式进行抽离，复杂的页面布局/逻辑等放入独立写的模块内部，使用详情组件只需要传入组件定义的数据/方法/chidlren等就可以完成相应功能开发。 封装组件主要分三类： 普通展示型组件(函数式组件) 纯逻型组件(容器组件) 通用业务组件(以基础组件/第三方组件为基础+一定的业务逻辑) 封装普通展示型组件 通过函数式组件实现，比较轻量，不带组件的生命周期，不带内部state，后期也可以通过React Hooks添加内部状态数据的控制\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"前端进阶\"}],[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"React封装通用组件\\\",\\\"image\\\":[\\\"\\\"],\\\"dateModified\\\":null,\\\"author\\\":[]}\"]]},\"headers\":[{\"level\":2,\"title\":\"封装通用组件\",\"slug\":\"封装通用组件\",\"link\":\"#封装通用组件\",\"children\":[{\"level\":3,\"title\":\"主要思想\",\"slug\":\"主要思想\",\"link\":\"#主要思想\",\"children\":[]},{\"level\":3,\"title\":\"封装普通展示型组件\",\"slug\":\"封装普通展示型组件\",\"link\":\"#封装普通展示型组件\",\"children\":[]},{\"level\":3,\"title\":\"封装纯逻型组件\",\"slug\":\"封装纯逻型组件\",\"link\":\"#封装纯逻型组件\",\"children\":[]},{\"level\":3,\"title\":\"封装通用业务组件\",\"slug\":\"封装通用业务组件\",\"link\":\"#封装通用业务组件\",\"children\":[]},{\"level\":3,\"title\":\"一个通用业务组件封装示例\",\"slug\":\"一个通用业务组件封装示例\",\"link\":\"#一个通用业务组件封装示例\",\"children\":[]}]}],\"readingTime\":{\"minutes\":1.16,\"words\":347},\"filePathRelative\":\"program/react-component-encapsulation.md\",\"excerpt\":\"<h2> 封装通用组件</h2>\\n<h3> 主要思想</h3>\\n<p>封装组件的思想主要是将前端页面/业务逻辑等按模块方式进行抽离，复杂的页面布局/逻辑等放入独立写的模块内部，使用详情组件只需要传入组件定义的数据/方法/chidlren等就可以完成相应功能开发。</p>\\n<p>封装组件主要分三类：</p>\\n<ol>\\n<li>普通展示型组件(函数式组件)</li>\\n<li>纯逻型组件(容器组件)</li>\\n<li>通用业务组件(以基础组件/第三方组件为基础+一定的业务逻辑)</li>\\n</ol>\\n<h3> 封装普通展示型组件</h3>\\n<p>通过函数式组件实现，比较轻量，不带组件的生命周期，不带内部state，后期也可以通过React Hooks添加内部状态数据的控制</p>\",\"autoDesc\":true}")
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

@@ -40,13 +40,13 @@ const app = new Vue({
 
 ## 使用流程
 
-**![使用流程](~@imgs/852cd383-a782-414c-9933-149d19db4198.png)**
+<img src="@imgs/852cd383-a782-414c-9933-149d19db4198.png">
 
 > 这里vue-router的设计哲学与react-routerV4不太一样，前者是以路由配置来统一配置路由，后者是路由即组件的概念（不需要统一的路由配置，不过自行封装成路由配置）
 
 
 ## 核心特性
-![核心特性](~@imgs/9516091f-4193-41fc-b668-a8bd5e511ffe.png)
+<img src="@imgs/9516091f-4193-41fc-b668-a8bd5e511ffe.png">
 
 
 以上这些是vue-router提供的核心功能，完整的用法说明可以参考[官方文档](https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html#%E5%93%8D%E5%BA%94%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E7%9A%84%E5%8F%98%E5%8C%96)，下面将逐步分析vue-router源码中是如何实现以上这些核心功能的。
@@ -55,7 +55,7 @@ const app = new Vue({
 # 阅读源码的前置条件
 
 ## 源码目录结构
-![源码目录结构](~@imgs/ac0c7e0f-57c4-4553-aaaf-f1fbe751faa0.png)
+<img src="@imgs/ac0c7e0f-57c4-4553-aaaf-f1fbe751faa0.png">
 
 
 源码结构算是秉承着vue系列的一目了然的特性，主要分为组件link和view、维护路由的history、vue插件的注册方法install.js、模块导出文件index.js
@@ -63,7 +63,7 @@ const app = new Vue({
 ## 基础概念——路由实例router
 路由实例router是在使用vue-router的时候通过传入路由记录等配置而生成的实例对象，重点在于其VueRouter类的实现。
 
-![路由实例router](~@imgs/3208bfb8-d96d-4e3f-bdd0-aa6d2687235d.png)
+<img src="@imgs/3208bfb8-d96d-4e3f-bdd0-aa6d2687235d.png">
 
 ### init方法的实现
 这里的init方法与install.js中注册的全局mixin关联最大，是vue组件在create时执行的初始化路由方法，需要重点分析一下。
@@ -217,7 +217,7 @@ const router = new VueRouter({
 ## 主要实现思路
 要实现动态路由匹配主要是要实现路由记录的path属性与实际的路由路径的参数进行匹配，而要实现嵌套路由则需要根据嵌套规则对路由记录解析，这两个都在create-route-map进行实现，实现的思路如下：
 
-![主要实现思路](~@imgs/00a39db2-760f-43d5-bc9f-a472c4450710.png)
+<img src="@imgs/00a39db2-760f-43d5-bc9f-a472c4450710.png">
 
 create-route-map中的核心代码如下：
 
@@ -350,7 +350,7 @@ export function createRouteMap (
 # 导航守卫机制
 导航守卫给给路由使用者传入自定义的控制路由跳转逻辑的钩子方法，通过 `next` 方法串行执行下一个路由的匹配逻辑，根据定义导航守卫的位置不同可以将其分为三类：**全局导航守卫、路由独享守卫、组件内部导航守卫**。
 
-![导航守卫机制](~@imgs/83b03bac-1783-42ca-aba7-35ec8952d325.png)
+<img src="@imgs/83b03bac-1783-42ca-aba7-35ec8952d325.png">
 
 ## 导航守卫的注册
 用注册导航守卫方法或导航守卫配置会被注册到执行队列中，在路由跳转时根据根据路由配置映射计算出组件实例的更新、替换、重用等情况，然后在对应组件上遍历执行导航守卫队列。
@@ -450,7 +450,7 @@ const queue: Array<?NavigationGuard> = [].concat(
 源码：[L133](https://github.com/vuejs/vue-router/blob/dev/src/history/base.js#L133)
 
 **导航钩子的解析流程**
-![解析流程](~@imgs/3cf41362-5479-4926-afa5-eb867f07fddc.png)
+<img src="@imgs/3cf41362-5479-4926-afa5-eb867f07fddc.png">
 
 **导航钩子解析对应的源码**
 ```javascript

@@ -1,0 +1,14 @@
+export const data = JSON.parse("{\"key\":\"v-1fcdcab9\",\"path\":\"/articles/\",\"title\":\"目录\",\"lang\":\"en-US\",\"frontmatter\":{\"sideBar\":true,\"description\":\"目录 title1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur enim ratione impedit suscipit atque deleniti maxime voluptatibus repellendus ad quaerat quas alias, odio eius molestiae quis, eligendi corrupti illo error. title2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem autem asperiores sed perferendis, nulla dignissimos nobis incidunt voluptate quaerat assumenda numquam ipsa, distinctio quo possimus atque soluta. Aliquid, dolorem minima.\",\"head\":[[\"meta\",{\"property\":\"og:url\",\"content\":\"https://johniexu.github.io/xx-blog/articles/\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"迪诺笔记\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"目录\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"目录 title1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur enim ratione impedit suscipit atque deleniti maxime voluptatibus repellendus ad quaerat quas alias, odio eius molestiae quis, eligendi corrupti illo error. title2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem autem asperiores sed perferendis, nulla dignissimos nobis incidunt voluptate quaerat assumenda numquam ipsa, distinctio quo possimus atque soluta. Aliquid, dolorem minima.\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"目录\\\",\\\"image\\\":[\\\"\\\"],\\\"dateModified\\\":null,\\\"author\\\":[]}\"]]},\"headers\":[{\"level\":2,\"title\":\"title1\",\"slug\":\"title1\",\"link\":\"#title1\",\"children\":[]},{\"level\":2,\"title\":\"title2\",\"slug\":\"title2\",\"link\":\"#title2\",\"children\":[]}],\"readingTime\":{\"minutes\":0.22,\"words\":66},\"filePathRelative\":\"articles/README.md\",\"excerpt\":\"<h1> 目录</h1>\\n<h2> title1</h2>\\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur enim ratione impedit suscipit atque deleniti maxime voluptatibus repellendus ad quaerat quas alias, odio eius molestiae quis, eligendi corrupti illo error.</p>\\n<h2> title2</h2>\\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem autem asperiores sed perferendis, nulla dignissimos nobis incidunt voluptate quaerat assumenda numquam ipsa, distinctio quo possimus atque soluta. Aliquid, dolorem minima.</p>\",\"autoDesc\":true}")
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

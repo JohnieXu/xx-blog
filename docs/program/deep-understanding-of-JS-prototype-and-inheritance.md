@@ -33,8 +33,7 @@ tags:
 原型（`prototype`）本身也是一个对象，称为**原型对象**。构造函数上的属性 `prototype` 指向原型对象，实例上的属性 `__proto__` 指向原型对象。
 
 
-
-![JS原型.png](~@imgs/b7f24516-9e3c-4a50-902c-41a205947b13.png)
+<img src="@imgs/b7f24516-9e3c-4a50-902c-41a205947b13.png" alt="JS原型.png">
 
 `prototype` 与 `___proto___` 的指向关系图
 
@@ -42,8 +41,7 @@ tags:
 借助原型实现继承的核心思想是：对象在查找属性和方法时首先看对象自身是否存在，不存在则去原型对象上查找，若未找到则继续到原型对象的原型对象上查找，依次进行下去直到查找到内置对象`Object`。即，**实例属性访问是沿着原型链向上递归查找**。
 
 
-
-![原型链与属性访问.png](~@imgs/2623680a-41fb-4a08-9048-dff736105bd8.png)
+<img src="@imgs/2623680a-41fb-4a08-9048-dff736105bd8.png" alt="原型链与属性访问.png">
 
 实例属性访问时沿原型链递归查找
 
@@ -52,7 +50,7 @@ tags:
 
 完整的构造函数、原型、原型链组成及之间的关系如下图所示：
 
-![](~@imgs/30a1bb57-0d4e-49ac-ad03-4581324e4401.png)
+<img src="@imgs/30a1bb57-0d4e-49ac-ad03-4581324e4401.png">
 
 
 ### 实例分析
@@ -82,7 +80,7 @@ console.log(instance2.isPlay()); // 2 is done
 
 
 
-![](~@imgs/1dd05efd-d977-4994-97c0-35cce5d973de.png)
+img src="@imgs/1dd05efd-d977-4994-97c0-35cce5d973de.png">
 
 
 
@@ -117,7 +115,7 @@ console.log(instance2.isDoing); // nonono!
 这种情况下的实例、原型对象、构造函数之间的关系图如下：
 
 
-![](~@imgs/2bae0844-c97a-4529-b9a8-ebd7a240b193.png)
+<img src="@imgs/2bae0844-c97a-4529-b9a8-ebd7a240b193.png">
 
 
 
@@ -148,7 +146,7 @@ console.log(instance2.isDoing); // yesyesyes！
 
 
 
-![](~@imgs/45e39817-7c06-4f5a-9d7d-ed185f246864.png)
+<img src="@imgs/45e39817-7c06-4f5a-9d7d-ed185f246864.png">
 
 上述实例部分内存模型
 
@@ -175,7 +173,7 @@ console.log(instance2.isDoing); // nonono!
 
 
 
-![](~@imgs/0e1a5b12-c8ee-4c00-8e67-d7e8d986f209.png)
+<img src="@imgs/0e1a5b12-c8ee-4c00-8e67-d7e8d986f209.png">
 
 属性沿着原型链查找示意图
 
@@ -230,7 +228,7 @@ console.log(instance2.isDoing); // nonono!
 
 
 
-![](~@imgs/1c454a56-eb16-42d1-a221-f816fc1f0ec7.png)
+<img src="@imgs/1c454a56-eb16-42d1-a221-f816fc1f0ec7.png">
 
 new 的执行过程图示
 
@@ -508,7 +506,7 @@ cat1 instanceof Animal // true
 > 作者博客：[https://johniexu.github.io](https://johniexu.github.io/)
 > 作者github：[https://github.com/johniexu](https://github.com/johniexu)
 
-![](~@imgs/weixin_subscribe.png)
+<img src="@imgs/weixin_subscribe.png">
 
 【全面分析总结前端系列】
 
