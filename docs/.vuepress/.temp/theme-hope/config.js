@@ -1,15 +1,15 @@
 import { defineClientConfig } from "@vuepress/client";
-import { VPLink } from "E:/projects/demo/xx-blog/node_modules/vuepress-shared/lib/client/index.js";
+import { VPLink } from "/Users/johniexu/Documents/github/xx-blog/node_modules/vuepress-shared/lib/client/index.js";
 
-import { HopeIcon, Layout, NotFound, useScrollPromise, injectDarkmode, setupDarkmode, setupSidebarItems } from "E:/projects/demo/xx-blog/node_modules/vuepress-theme-hope/lib/bundle/export.js";
+import { HopeIcon, Layout, NotFound, useScrollPromise, injectDarkmode, setupDarkmode, setupSidebarItems } from "/Users/johniexu/Documents/github/xx-blog/node_modules/vuepress-theme-hope/lib/bundle/export.js";
 
-import { defineAutoCatalogIconComponent } from "E:/projects/demo/xx-blog/node_modules/vuepress-plugin-auto-catalog/lib/client/index.js"
-import { BlogCategory, BlogHome, BlogType, BloggerInfo, Timeline, setupBlog } from "E:/projects/demo/xx-blog/node_modules/vuepress-theme-hope/lib/bundle/modules/blog/export.js";
-import "E:/projects/demo/xx-blog/node_modules/vuepress-theme-hope/lib/bundle/modules/blog/styles/all.scss";
-import { GlobalEncrypt, LocalEncrypt } from "E:/projects/demo/xx-blog/node_modules/vuepress-theme-hope/lib/bundle/modules/encrypt/export.js";
-import "E:/projects/demo/xx-blog/node_modules/vuepress-theme-hope/lib/bundle/modules/encrypt/styles/all.scss"
+import { defineAutoCatalogIconComponent } from "/Users/johniexu/Documents/github/xx-blog/node_modules/vuepress-plugin-auto-catalog/lib/client/index.js"
+import { BlogCategory, BlogHome, BlogType, BloggerInfo, Timeline, setupBlog } from "/Users/johniexu/Documents/github/xx-blog/node_modules/vuepress-theme-hope/lib/bundle/modules/blog/export.js";
+import "/Users/johniexu/Documents/github/xx-blog/node_modules/vuepress-theme-hope/lib/bundle/modules/blog/styles/all.scss";
+import { GlobalEncrypt, LocalEncrypt } from "/Users/johniexu/Documents/github/xx-blog/node_modules/vuepress-theme-hope/lib/bundle/modules/encrypt/export.js";
+import "/Users/johniexu/Documents/github/xx-blog/node_modules/vuepress-theme-hope/lib/bundle/modules/encrypt/styles/all.scss"
 
-import "E:/projects/demo/xx-blog/node_modules/vuepress-theme-hope/lib/bundle/styles/all.scss";
+import "/Users/johniexu/Documents/github/xx-blog/node_modules/vuepress-theme-hope/lib/bundle/styles/all.scss";
 
 defineAutoCatalogIconComponent(HopeIcon);
 
