@@ -2,6 +2,7 @@ node_modules/
 yarn-error.log
 dist/
 docs/.vuepress/.temp
+docs/.vuepress/.cache
 .DS_Store
 yarn.lock
 oss_upload
