@@ -744,7 +744,7 @@ function findAnchor (children) {
 > 
 > 首发自语雀：[https://www.yuque.com/johniexu/frontend/su0uf8](https://www.yuque.com/johniexu/frontend/su0uf8)
 > 
-> 作者博客地址：[https://blog.lessing.online/](https://blog.lessing.online/)
+> 作者博客地址：[https://johniexu.github.io/](https://johniexu.github.io/)
 > 
 > 作者github：[https://github.com/johniexu](https://github.com/johniexu)
 

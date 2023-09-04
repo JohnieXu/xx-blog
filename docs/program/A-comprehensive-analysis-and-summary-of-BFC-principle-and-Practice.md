@@ -15,7 +15,7 @@ tags:
 
 这篇文章主要就是彻底分析清楚BFC原理、总结BFC经典场景中的用法，最后在实践中总结BFC在H5、小程序开发中的应用。
 
-> 本文首发自[JohnieXu's Blog](https://blog.lessing.online/)，转载请注明出处😁
+> 本文首发自[JohnieXu's Blog](https://johniexu.github.io/)，转载请注明出处😁
 
 ## 一、BFC作用
 
@@ -264,7 +264,7 @@ tags:
 ## 写在最后
 > 既然看到这里了不妨点个赞鼓励下作者呗 :)
 > 
-> 作者博客：[https://blog.lessing.online/](https://blog.lessing.online/)
+> 作者博客：[https://johniexu.github.io/](https://johniexu.github.io/)
 > 
 > 作者github：[https://github.com/johniexu](https://github.com/johniexu)
 

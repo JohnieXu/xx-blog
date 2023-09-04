@@ -4,6 +4,7 @@ const { config } = require("vuepress-theme-hope");
 const PUBLISH_PATH = "/xx-blog/";
 
 module.exports = config({
+  hostname: "johniexu.github.io",
   title: "迪诺笔记",
   description: "哪里会有人喜欢孤独，不过是不喜欢失望罢了。    ——村上春树",
   base: PUBLISH_PATH,

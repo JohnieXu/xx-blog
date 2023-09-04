@@ -6,7 +6,7 @@ title: 实战分享——文章导航
 ## VuePress搭建支持PWA的博客
 
 :::tip
-本项目是个人独立开发的个人博客项目，已经上线[迪诺笔记](https://blog.lessing.online)，备用地址：[迪诺笔记](http://johniexu.gitee.io)
+本项目是个人独立开发的个人博客项目，已经上线[迪诺笔记](https://johniexu.github.io)
 :::
 
 <p align="center">桌面端预览</p>
