@@ -1,6 +1,7 @@
 import { getDirname, path } from '@vuepress/utils'
 import { defineUserConfig } from "vuepress";
-import { hopeTheme } from "vuepress-theme-hope";
+import { hopeTheme, readingTime } from "vuepress-theme-hope";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 
 const __dirname = getDirname(import.meta.url)
 const imgPath = path.resolve(__dirname, '../../static/imgs')
@@ -75,8 +76,20 @@ export default defineUserConfig({
     ]
   ],
   theme: hopeTheme({
+    pure: true,
+    logo: '/logo.png',
     plugins: {
       blog: true,
+      pwa: {
+        cacheHTML: true,
+        cachePic: true,
+      },
+      sitemap: true,
+      copyCode: {},
+      readingTime: {
+        wordPerMinute: 200,
+      },
+      git: {},
     },
     hostname: "johniexu.github.io",
     hotReload: true,
@@ -90,6 +103,8 @@ export default defineUserConfig({
     editLink: true,
     contributors: true,
     breadcrumb: true,
+    docsDir: 'docs',
+    docsBranch: 'master',
     blog: {
       avatar: '/avatar.jpeg',
       name: 'JohnieXu',
@@ -97,7 +112,8 @@ export default defineUserConfig({
       medias: {
         Email: 'mailto:281910378@qq.com',
         GitHub: 'https://github.com/JohnieXu/'
-      }
+      },
+      articlePerPage: 20,
     },
     encrypt: {
       config: {
@@ -106,29 +122,29 @@ export default defineUserConfig({
     }
   }),
   plugins: [
+    searchProPlugin({
+      indexContent: true,
+      hotReload: true,
+      customFields: [
+        {
+          getter: (page) => page.frontmatter.author as any,
+          formatter: "作者：$content"
+        },
+        {
+          getter: (page) => page.frontmatter.category as any,
+          formatter: "分类：$content",
+        },
+        {
+          getter: (page) => page.frontmatter.tag as any,
+          formatter: "标签：$content",
+        },
+      ]
+    }),
     [
       "@vuepress/google-analytics",
       {
         ga: "G-1HXVHRSBB0"
       }
     ],
-    [
-      "@vuepress/pwa",
-      {
-        serviceWorker: true,
-        updatePopup: {
-          message: "Get到了一波新技能",
-          buttonText: "更新"
-        }
-      }
-    ],
-    [
-      "sitemap",
-      {
-        hostname: /^http/.test(PUBLISH_PATH)
-          ? "https://blog.lessing.online"
-          : "https://blog.lessing.online" + PUBLISH_PATH
-      }
-    ]
   ]
 })
