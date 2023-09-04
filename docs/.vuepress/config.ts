@@ -4,9 +4,9 @@ import { hopeTheme } from "vuepress-theme-hope";
 
 const __dirname = getDirname(import.meta.url)
 const imgPath = path.resolve(__dirname, '../../static/imgs')
-console.log('imgPath', imgPath)
 
-const PUBLISH_PATH = "/xx-blog/";
+const IS_VERCEL = process.env.IS_VERCEL === 'true'
+const PUBLISH_PATH = IS_VERCEL ? '/' : '/xx-blog/';
 
 export default defineUserConfig({
   title: "迪诺笔记",
