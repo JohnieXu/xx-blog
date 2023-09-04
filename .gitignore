@@ -4,5 +4,5 @@ dist/
 docs/.vuepress/.temp
 docs/.vuepress/.cache
 .DS_Store
-yarn.lock
+package-lock.json
 oss_upload
