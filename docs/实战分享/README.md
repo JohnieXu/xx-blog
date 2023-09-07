@@ -1,9 +1,8 @@
 ---
-sidebar: false
-title: 实战分享——文章导航
+title: 实战分享
 ---
 
-## VuePress搭建支持PWA的博客
+# VuePress搭建支持PWA的博客
 
 :::tip
 本项目是个人独立开发的个人博客项目，已经上线[迪诺笔记](https://johniexu.github.io)

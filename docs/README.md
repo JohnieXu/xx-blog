@@ -9,7 +9,7 @@ tagline: 哪里会有人喜欢孤独，不过是不喜欢失望罢了。    —�
 heroFullScreen: true
 actions:
 - text: 开始吧->
-  link: /article/
+  link: /文章专栏/
   type: primary
 features:
 - title: 宁静
