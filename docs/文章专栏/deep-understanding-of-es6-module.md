@@ -2,8 +2,8 @@
 title: ES6模块的核心知识点
 created: 2018/01/02
 updated: 2019/08/21
-tag:
-  - 前端进阶
+category:
+  - 文章专栏
 ---
 
 ## ES6模块与前ES6模块概念区别

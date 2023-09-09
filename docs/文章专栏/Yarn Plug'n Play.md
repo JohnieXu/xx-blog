@@ -3,8 +3,8 @@ title: Yarn 的 Plug'n'Play 特性
 created: 2020/05/03
 updated: 2020/05/03
 category:
-  - 工具笔记
-  - 前端工具
+  - 文章专栏
+  - 硬核前端
 tag:
   - yarn
   - 前端工具

@@ -3,10 +3,8 @@ title: JS原型链
 created: 2019/11/06
 updated: 2019/11/06
 category:
+  - 文章专栏
   - 硬核前端
-tag:
-  - 前端核心
-  - 前端进阶
 ---
 
 ## 前言

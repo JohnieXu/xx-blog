@@ -3,8 +3,8 @@ title: Git常用命令整理
 created: 2017/03/01
 updated: 2021/12/02
 category:
-  - 工具笔记
-  - 前端工具
+  - 文章专栏
+  - 硬核前端
 tag:
   - git
   - 前端工具

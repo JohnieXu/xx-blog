@@ -2,8 +2,11 @@
 title: React中使用Video.js
 created: 2018/05/04
 updated: 2018/05/04
+category:
+  - 文章专栏
+  - 硬核前端
 tag:
-  - 未分类
+  - React
 ---
 
 ## 0-Intro
