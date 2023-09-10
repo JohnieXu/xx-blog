@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 title: 首页
 bgImage: /hero.jpg
-heroImage: /hero.jpg
+heroImage: /hero_round.png
 heroText: 迪诺笔记
 tagline: 哪里会有人喜欢孤独，不过是不喜欢失望罢了。    ——村上春树
 heroFullScreen: true
