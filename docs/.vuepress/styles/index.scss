@@ -1,0 +1,47 @@
+// https://theme-hope.vuejs.press/zh/config/style.html#index-scss
+
+.vp-blog-hero {
+  color: #fff;
+}
+
+.vp-blogger-avatar {
+  filter: grayscale(1) contrast(1.2);
+  &:hover {
+    filter: grayscale(1) contrast(1.2) drop-shadow(0 0 1rem #FAD95C);
+  }
+}
+
+.vp-sidebar-heading {
+  font-size: 1em;
+}
+
+.vp-sidebar-link {
+  font-size: 0.9em;
+}
+
+.vp-page-title {
+  h1 {
+    font-size: 1.75em;
+  }
+  h2 {
+    font-size: 1.45em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+}
+
+.vp-article-item {
+  .vp-article-excerpt {
+    opacity: 0.8;
+    h1 {
+      font-size: 1.65em;
+    }
+    h2 {
+      font-size: 1.35em;
+    }
+    h3 {
+      font-size: 1.1em;
+    }
+  }
+}

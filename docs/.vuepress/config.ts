@@ -17,6 +17,7 @@ export default defineUserConfig({
   alias: {
     '@imgs': imgPath,
   },
+  shouldPrefetch: false,
   themeConfig: {
     
   },
@@ -83,6 +84,9 @@ export default defineUserConfig({
       pwa: {
         cacheHTML: true,
         cachePic: true,
+        update: 'force',
+        favicon: '/favicon.ico',
+        themeColor: '#ffd93b',
       },
       sitemap: true,
       copyCode: {},
