@@ -87,7 +87,7 @@ export default defineUserConfig({
       sitemap: true,
       copyCode: {},
       readingTime: {
-        wordPerMinute: 200,
+        wordPerMinute: 300,
       },
       git: {},
     },
