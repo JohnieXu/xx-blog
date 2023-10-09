@@ -44,7 +44,7 @@ npx 75_action random <N>
 
 借助 Github Actions 配置定时任务，每天0 8 16点执行自定执行[[#抓取全部文章链接]]任务，并将抓取到的文章数据打包上传至 GitHub 可供下载使用。
 
-![](attachment/33d0fb86dfe9563e295e8d421f3d535c.png)
+<img src="@imgs/33d0fb86dfe9563e295e8d421f3d535c.png">
 
 ## 方案设计
 
