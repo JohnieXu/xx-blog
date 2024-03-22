@@ -508,6 +508,25 @@ git rm -r --cached /path/to/ignored_folder/
 相当于执行：**删除**、**添加暂存区**，后续需要你自己 commit **提交**
 :::
 
+### 基于tag创建新分支
+
+**使用场景**
+
+在业务上需要基于之前某次发版的tag代码来修复bug或添加新需求，修改的代码需要放到新的分支上提交并发布。
+
+```bash
+# 基于tag创建新分支
+git checkout -b [new_branch_name] [tag_name]
+
+# 推送新创建的分支
+git push -u origin [new_branch_name]
+```
+
+- `-b`: 表示创建新分支
+- `new_branch_name`:d 新分支的名字
+- `tag_name`: tag的名字
+- `-u`: 表示将`[new_branch_name]`分支关联到远程仓库，否则直接`git push`会报错：`fatal: The current branch xxx has no upstream branch.`
+
 ## 四、实际使用流程
 
 ### 基本配置
