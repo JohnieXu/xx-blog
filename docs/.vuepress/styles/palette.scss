@@ -3,4 +3,6 @@
 $theme-color: #2bae85;
 $navbar-height: 3em;
 $card-shadow: rgba(200, 200, 200, 0.15);
-$font-family-heading: $font-family;
+$font-family: 'Georgia, -apple-system, "Nimbus Roman No9 L", "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Microsoft Yahei", "WenQuanYi Micro Hei", "ST Heiti", sans-serif';
+$font-family-serif: '"Noto Serif SC", serif';
+$font-family-heading: $font-family-serif;
