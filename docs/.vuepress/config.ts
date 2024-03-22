@@ -86,7 +86,7 @@ export default defineUserConfig({
         cachePic: true,
         update: 'force',
         favicon: '/favicon.ico',
-        themeColor: '#ffd93b',
+        themeColor: '#12a182',
       },
       sitemap: true,
       copyCode: {},
