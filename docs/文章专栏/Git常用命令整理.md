@@ -376,23 +376,30 @@ git checkout --patch [branch_name] [target_file_path] // 接下来根据提示�
 
 这时候希望切换到远程仓库其他的分支，而直接`git checkout branch_name`是不生效的（本地没有对应分支）
 
-情况一：
+情况一：（直接 `git clone`）
 
 ```bash
-git checkout -b 3.x-table origin/2.x-stable // 拉取远程的3.x-stable分支并关联到本地3.x-stable分支
-```
-
-情况二：
-
-```bash
-git branch -va // 查看全部本地和远程分支，发现远程也没有3.x-stalbe分支
-git remote set-branches origin "3.x-stable"
-git fetch --depth=1 origin 3.x-stable // 拉取上一步自行关联的3.x-stable分支
+git checkout -b 3.x-stable origin/3.x-stable // 拉取远程的3.x-stable分支并关联到本地3.x-stable分支
 ```
 
 实际操作结果如下：
 
-![拉取ant-design3.x-stable分支](https://tva1.sinaimg.cn/large/00831rSTgy1gcchgd9brrj30va06etb3.jpg)
+<img src="@imgs/9f575ce8-4ec3-4986-8111-3878f798f8b1.jpg">
+
+情况二：（`git clone --depth=1`）
+
+```bash
+#git branch -va // 查看全部本地和远程分支，发现远程也没有3.x-stalbe分支
+git remote set-branches origin "3.x-stable"
+git fetch --depth=1 origin 3.x-stable // 拉取上一步自行关联的3.x-stable分支，这是 origin 生成 3.x-stable 分支
+git checkout -b 3.x-stable origin/3.x-stable // 本地创建3.x-stable分支，并关联到 origin 上的 3.x-stable 分支
+```
+
+实际操作结果如下：
+
+<img src="@imgs/8b28328b-6d05-488c-82dd-b5a5fa49a42b.jpg">
+
+<img src="@imgs/2de6df20-a65d-4563-a8c0-5ed8173ee083.jpg">
 
 > 拉取ant-design3.x-stable分支
 
@@ -408,7 +415,7 @@ git fetch --unshallow // 使用--unshallow属性来合并到完整的git仓库
 
 实际操作结果如下：
 
-![使用git fetch --unshallow拉取完整的vue-router项目](https://tva1.sinaimg.cn/large/00831rSTgy1gdn9ga0aetj317r0u040w.jpg)
+<img src="@imgs/5aa61a5b-0044-439b-8a6a-b15b51c63366.jpg">
 
 > 使用`git fetch --unshallow`拉取完整的vue-router项目，后续的以及之前的commit记录都可以看到
 
