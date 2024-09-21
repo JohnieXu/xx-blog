@@ -471,7 +471,7 @@ git bundle verify path/to/develop.bundle // 检查收到的离线包是否有效
 ```bash
 git log --since="2023-4-23 00:00:00" --until="2023-4-23 23:59:59" --pretty=format:"%h - %an, %ar : %s" --name-status --author="徐志勇"
 ```
-![按时间范围筛选commit记录](https://cdn.nlark.com/yuque/0/2023/png/298369/1682240459783-598a804f-dad5-4353-af7b-7f843bbc244b.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_22%2Ctext_QEpvaG5pZVh1%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+<img src="@imgs/4bda467d-5ed7-4666-8b0e-20a55803ccaf.png">
 
 ### 清理忽略但本地存在文件、目录
 
@@ -514,6 +514,25 @@ git rm -r --cached /path/to/ignored_folder/
 ::: warning
 相当于执行：**删除**、**添加暂存区**，后续需要你自己 commit **提交**
 :::
+
+### 基于tag创建新分支
+
+**使用场景**
+
+在业务上需要基于之前某次发版的tag代码来修复bug或添加新需求，修改的代码需要放到新的分支上提交并发布。
+
+```bash
+# 基于tag创建新分支
+git checkout -b [new_branch_name] [tag_name]
+
+# 推送新创建的分支
+git push -u origin [new_branch_name]
+```
+
+- `-b`: 表示创建新分支
+- `new_branch_name`:d 新分支的名字
+- `tag_name`: tag的名字
+- `-u`: 表示将`[new_branch_name]`分支关联到远程仓库，否则直接`git push`会报错：`fatal: The current branch xxx has no upstream branch.`
 
 ## 四、实际使用流程
 
@@ -721,9 +740,3 @@ git push origin master --tags // 当存在tags时可以顺便推送tags到远程
 随着`master`分支的不断更新，总会在某个时间点恰好满足了当时的开发需求，于是此时就可以打个`tag`标签，可类比于自己特定情况下达成的一个小目标。
 
 Git本身就是一套管理规则，纵使你提交了无数个`commit`， 打了无数个`tag`，它也不会帮你成为“海贼王”找到`one piece`。就像各种技术的设计思想一样，Git本身也是源自于生活，也最终会回到生活。生活一样也没有万能的东西，且行且珍惜～
-
-## 全文目录速览
-
-[[toc]]
-
-----

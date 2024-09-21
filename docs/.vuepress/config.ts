@@ -74,7 +74,20 @@ export default defineUserConfig({
         name: "baidu-site-verification",
         content: "8xYgZOGSrO"
       }
-    ]
+    ],
+    // 字体
+    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+    [
+      "link",
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
+    ],
+    [
+      "link",
+      {
+        href: "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap",
+        rel: "stylesheet",
+      },
+    ],
   ],
   theme: hopeTheme({
     pure: true,
@@ -86,7 +99,7 @@ export default defineUserConfig({
         cachePic: true,
         update: 'force',
         favicon: '/favicon.ico',
-        themeColor: '#ffd93b',
+        themeColor: '#12a182',
       },
       sitemap: true,
       copyCode: {},
