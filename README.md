@@ -10,9 +10,9 @@
 >
 > ~~访问地址：https://blog.lessing.online/~~
 > 
-> ~~备用地址1：https://www.lessing.online/xx-blog/（github-pages）~~
+> ~~备用地址1：https://www.lessing.online/xx-blog/  （github-pages）~~
 >
-> 备用地址2：https://xx-blog.vercel.app/（vercel）
+> 备用地址2：https://xx-blog.vercel.app/  （vercel）
 
 <p align="center">
   <img src="https://p.pstatp.com/origin/pgc-image/e81d9530685a42d28394848a41a83d2d" width="600" />
